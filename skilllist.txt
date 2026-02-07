@@ -1,0 +1,1112 @@
+ps_life0001_only_up_02:Time for Retaliation
+ps_life0001_only_up_03:Paladin's Blessing
+ps_life0001_only_up_01:Guard +
+ps_life0002_only_up_01:Mercenary's Pride
+ps_life0002_only_up_02:Honed and Hardened
+ps_life0003_only_up_01:Hunter's Fury
+ps_life0003_only_up_02:Hawk Eye
+ps_life0004_only_up_01:Overclocked
+ps_life0004_only_up_02:Boundless Mana
+as_b01_charge_attackA_01:Heavy Swing I
+as_b01_charge_attackA_02:Heavy Swing II
+as_b01_charge_attackA_03:Heavy Swing III
+as_b01_charge_attackB_01:Dragon Claw I
+as_b01_charge_attackB_02:Dragon Claw II
+as_b01_charge_attackB_03:Dragon Claw III
+as_b01_unique_01:Charge Attack
+as_b01_unique_02:Super Charge
+as_b01_tension_01:Earthquake
+as_b01_tension_02:Meteor Crash
+as_b02_charge_attackA_01:Sonic Blade I
+as_b02_charge_attackA_02:Sonic Blade II
+as_b02_charge_attackA_03:Sonic Blade III
+as_b02_charge_attackB_01:Divine Shield I
+as_b02_charge_attackB_02:Divine Shield II
+as_b02_charge_attackB_03:Divine Shield III
+as_b02_shield_01:Shield Guard
+as_b02_shield_02:Lightning Strike
+as_b02_tension_01:Saintly Slash
+as_b02_tension_02:Elemental Edge
+as_b03_charge_generic_attackA_01:Arrow Rain I
+as_b03_charge_generic_attackA_02:Arrow Rain II
+as_b03_charge_generic_attackA_03:Arrow Rain III
+as_b03_charge_attackA_01:Arrow Rain I
+as_b03_charge_attackA_02:Arrow Rain II
+as_b03_charge_attackA_03:Arrow Rain III
+as_b03_charge_attackA_sleep_01:Sleep Arrow I
+as_b03_charge_attackA_sleep_02:Sleep Arrow II
+as_b03_charge_attackA_sleep_03:Sleep Arrow III
+as_b03_charge_attackA_poison_01:Poison Arrow I
+as_b03_charge_attackA_poison_02:Poison Arrow II
+as_b03_charge_attackA_poison_03:Poison Arrow III
+as_b03_charge_attackA_paralyze_01:Paralyzing Arrow I
+as_b03_charge_attackA_paralyze_02:Paralyzing Arrow II
+as_b03_charge_attackA_paralyze_03:Paralyzing Arrow III
+as_b03_charge_generic_attackB_01:Ultra-Piercing Arrow I
+as_b03_charge_generic_attackB_02:Ultra-Piercing Arrow II
+as_b03_charge_generic_attackB_03:Ultra-Piercing Arrow III
+as_b03_charge_attackB_nomal_01:Ultra-Piercing Arrow I
+as_b03_charge_attackB_nomal_02:Ultra-Piercing Arrow II
+as_b03_charge_attackB_nomal_03:Ultra-Piercing Arrow III
+as_b03_charge_attackB_sleep_01:Deep Sleep Arrow I
+as_b03_charge_attackB_sleep_02:Deep Sleep Arrow II
+as_b03_charge_attackB_sleep_03:Deep Sleep Arrow III
+as_b03_charge_attackB_poison_01:Deadly Poison Arrow I
+as_b03_charge_attackB_poison_02:Deadly Poison Arrow II
+as_b03_charge_attackB_poison_03:Deadly Poison Arrow III
+as_b03_charge_attackB_paralyze_01:Paralyzing Strike Arrow I
+as_b03_charge_attackB_paralyze_02:Paralyzing Strike Arrow II
+as_b03_charge_attackB_paralyze_03:Paralyzing Strike Arrow III
+as_b03_uniqueA_01:Hunter Step
+as_b03_tension_01:Lightning Shot
+as_b03_tension_02:Hurricane Shot
+rel_b03_mode_change_01:Switch Arrows: Sleep
+rel_b03_mode_change_02:Switch Arrows: Poison
+rel_b03_mode_change_03:Switch Arrows: Paralyze
+as_b04_charge_generic_attackA_01:Arcane Arts I
+as_b04_charge_generic_attackA_02:Arcane Arts II
+as_b04_charge_generic_attackA_03:Arcane Arts III
+as_b04_charge_attackA_01:Arcane Arts I
+as_b04_charge_attackA_02:Arcane Arts II
+as_b04_charge_attackA_03:Arcane Arts III
+as_b04_charge_attackA_guard_01:Arcane Guard I
+as_b04_charge_attackA_guard_02:Arcane Guard II
+as_b04_charge_attackA_guard_03:Arcane Guard III
+as_b04_charge_attackA_heal_01:Arcane Heal I
+as_b04_charge_attackA_heal_02:Arcane Heal II
+as_b04_charge_attackA_heal_03:Arcane Heal III
+as_b04_charge_generic_attackB_01:Spell Boost I
+as_b04_charge_generic_attackB_02:Spell Boost II
+as_b04_charge_generic_attackB_03:Spell Boost III
+as_b04_charge_attackB_nomal_01:Mystic Punishment I
+as_b04_charge_attackB_nomal_02:Mystic Punishment II
+as_b04_charge_attackB_nomal_03:Mystic Punishment III
+as_b04_charge_attackB_guard_01:Arcane Barrier I
+as_b04_charge_attackB_guard_02:Arcane Barrier II
+as_b04_charge_attackB_guard_03:Arcane Barrier III
+as_b04_charge_attackB_heal_01:Healing Forest I
+as_b04_charge_attackB_heal_02:Healing Forest II
+as_b04_charge_attackB_heal_03:Healing Forest III
+as_b04_uniqueA_01:Meditation
+as_b04_uniqueC_01:Thaumaturgy
+as_b04_tension_01:Shooting Star
+as_b04_tension_02:Collapsing Star
+rel_b04_mode_change_01:Switch Magic
+ps_life0005_only_up_01:Good Vibrations
+ps_life0005_only_up_02:Focused Charge
+ps_life0006_only_up_01:Tree Hugger
+ps_life0006_only_up_02:Forest's Blessing
+ps_life0007_only_up_01:Call of the Sea
+ps_life0007_only_up_02:Flow Like Water
+ps_life0008_only_up_01:Gentle Touch
+ps_life0008_only_up_02:Natural Immunity
+as_c02_unique_01:Sweet Spot Search
+as_c02_charge_attackA_01:Ore Breaker I
+as_c02_charge_attackA_02:Ore Breaker II
+as_c02_charge_attackA_03:Ore Breaker III
+as_c02_charge_attackB_01:Ore Buster I
+as_c02_charge_attackB_02:Ore Buster II
+as_c02_charge_attackB_03:Ore Buster III
+as_c02_tension_01:Bedrock Smash
+as_c02_tension_02:Bedrock Blast
+as_c01_unique_01:Sweet Spot Search
+as_c01_charge_attackA_01:Charged Chop I
+as_c01_charge_attackA_02:Charged Chop II
+as_c01_charge_attackA_03:Charged Chop III
+as_c01_charge_attackB_01:Triple Chop I
+as_c01_charge_attackB_02:Triple Chop II
+as_c01_charge_attackB_03:Triple Chop III
+as_c01_tension_01:Godly Swing
+as_c01_tension_02:Full Godly Swing
+as_c03_unique_01:Sweet Spot Search
+as_c03_charge_attackA_01:Rod Pull I
+as_c03_charge_attackA_02:Rod Pull II
+as_c03_charge_attackA_03:Rod Pull III
+as_c03_charge_attackB_01:Rod Heave I
+as_c03_charge_attackB_02:Rod Heave II
+as_c03_charge_attackB_03:Rod Heave III
+as_c03_tension_01:High and Dry
+as_c03_tension_02:Rippin' Lips
+as_c04_unique_01:Plow
+as_c04_charge_attackA_01:Spinning Harvest I
+as_c04_charge_attackA_02:Spinning Harvest II
+as_c04_charge_attackA_03:Spinning Harvest III
+as_c04_charge_attackB_01:Harvest Tornado I
+as_c04_charge_attackB_02:Harvest Tornado II
+as_c04_charge_attackB_03:Harvest Tornado III
+as_c04_tension_01:Upturn the Earth
+as_c04_tension_02:Grand Harvest
+rel_cook_recipe_01:Improv Cooking
+rel_cook_recipe_02:Pro Improv Cooking
+rel_cook_skip_game_01:1-Star Auto Cooking
+rel_cook_skip_game_02:2-Star Auto Cooking
+rel_cook_skip_game_03:3-Star Auto Cooking
+rel_cook_skip_game_04:4-Star Auto Cooking
+rel_cook_skip_game_05:5-Star Auto Cooking
+abi_cook_tension_01:Chef's Special
+abi_cook_tension_02:Mise en Place
+ps_cook_speed_up_01:The Art of Cooking
+ps_cook_recipe_special_01:Herbivore Chef
+ps_cook_recipe_special_02:Carnivore Chef
+ps_cook_recipe_special_03:Pâtissier
+ps_cook_action_drumroll_01:Tap Master
+ps_cook_action_drumroll_02:Tap Master
+ps_cook_action_drumroll_03:Tap Master
+ps_cook_action_longpress_01:Hold Master
+ps_cook_action_longpress_02:Hold Master
+ps_cook_action_longpress_03:Hold Master
+ps_cook_action_roll_01:Spin Master
+ps_cook_action_roll_02:Spin Master
+ps_cook_action_roll_03:Spin Master
+ps_cook_recipe_up_01:Island's Head Chef
+ps_cook_item_power_up_01:The Secret Ingredient
+rel_blacksmith_retype:Remake
+rel_blacksmith_secondary_material:Extra Materials
+rel_blacksmith_skip_game_01:1-Star Auto Smithing
+rel_blacksmith_skip_game_02:2-Star Auto Smithing
+rel_blacksmith_skip_game_03:3-Star Auto Smithing
+rel_blacksmith_skip_game_04:4-Star Auto Smithing
+rel_blacksmith_skip_game_05:5-Star Auto Smithing
+abi_blacksmith_tension_01:Heavy Strike
+abi_blacksmith_tension_02:Dancing Hammer
+ps_blacksmith_speed_up_01:The Art of Blacksmithing
+ps_blacksmith_recipe_special_01:Weaponsmithing
+ps_blacksmith_recipe_special_02:Armorsmithing
+ps_blacksmith_recipe_special_03:Objectsmithing
+ps_blacksmith_action_drumroll_01:Tap Master
+ps_blacksmith_action_drumroll_02:Tap Master
+ps_blacksmith_action_drumroll_03:Tap Master
+ps_blacksmith_action_longpress_01:Hold Master
+ps_blacksmith_action_longpress_02:Hold Master
+ps_blacksmith_action_longpress_03:Hold Master
+ps_blacksmith_recipe_up_01:Smith of Legend
+ps_blacksmith_item_power_up_01:Weaponsmith
+rel_carpenter_retype:Remake
+rel_carpenter_secondary_material:Extra Materials
+rel_carpenter_skip_game_01:1-Star Auto Carpentry
+rel_carpenter_skip_game_02:2-Star Auto Carpentry
+rel_carpenter_skip_game_03:3-Star Auto Carpentry
+rel_carpenter_skip_game_04:4-Star Auto Carpentry
+rel_carpenter_skip_game_05:5-Star Auto Carpentry
+abi_carpenter_tension_01:Hop 'n Chop
+abi_carpenter_tension_02:Chop Till You Drop
+ps_carpenter_speed_up_01:The Art of Carpentry
+ps_carpenter_recipe_special_01:Weapon Whittling
+ps_carpenter_recipe_special_02:Tool Crafting
+ps_carpenter_recipe_special_03:Wood Carving
+ps_carpenter_action_drumroll_01:Tap Master
+ps_carpenter_action_drumroll_02:Tap Master
+ps_carpenter_action_drumroll_03:Tap Master
+ps_carpenter_action_longpress_01:Hold Master
+ps_carpenter_action_longpress_02:Hold Master
+ps_carpenter_action_longpress_03:Hold Master
+ps_carpenter_recipe_up_01:Crafty Carpenter
+ps_carpenter_item_power_up_01:King of Wood
+rel_sewing_retype:Remake
+rel_sewing_secondary_material:Extra Materials
+rel_sewing_skip_game_01:1-Star Auto Sewing
+rel_sewing_skip_game_02:2-Star Auto Sewing
+rel_sewing_skip_game_03:3-Star Auto Sewing
+rel_sewing_skip_game_04:4-Star Auto Sewing
+rel_sewing_skip_game_05:5-Star Auto Sewing
+abi_sewing_tension_01:Sewing Machine
+abi_sewing_tension_02:Daydream
+ps_sewing_speed_up_01:The Art of Sewing
+ps_sewing_recipe_special_01:Fabric Armor Weaving
+ps_sewing_recipe_special_02:Fashionista
+ps_sewing_recipe_special_03:Object Sewing
+ps_sewing_action_drumroll_01:Tap Master
+ps_sewing_action_drumroll_02:Tap Master
+ps_sewing_action_drumroll_03:Tap Master
+ps_sewing_action_longpress_01:Hold Master
+ps_sewing_action_longpress_02:Hold Master
+ps_sewing_action_longpress_03:Hold Master
+ps_sewing_recipe_up_01:I've Sewn It All
+ps_sewing_item_power_up_01:Bespoke Tailoring
+rel_alchemy_recipe_01:Improv Chemistry
+rel_alchemy_recipe_02:Pro Improv Chemistry
+rel_alchemy_retype:Remake
+rel_alchemy_secondary_material:Extra Materials
+rel_alchemy_skip_game_01:1-Star Auto Alchemy
+rel_alchemy_skip_game_02:2-Star Auto Alchemy
+rel_alchemy_skip_game_03:3-Star Auto Alchemy
+rel_alchemy_skip_game_04:4-Star Auto Alchemy
+rel_alchemy_skip_game_05:5-Star Auto Alchemy
+abi_alchemy_tension_01:Quick Mix
+abi_alchemy_tension_02:Insta-Mix
+ps_alchemy_speed_up_01:The Art of Alchemy
+ps_alchemy_recipe_special_01:Mixing Technique
+ps_alchemy_recipe_special_02:Jeweler
+ps_alchemy_recipe_special_03:Alchemy Trinkets
+ps_alchemy_action_drumroll_01:Tap Master
+ps_alchemy_action_drumroll_02:Tap Master
+ps_alchemy_action_drumroll_03:Tap Master
+ps_alchemy_action_longpress_01:Hold Master
+ps_alchemy_action_longpress_02:Hold Master
+ps_alchemy_action_longpress_03:Hold Master
+ps_alchemy_action_roll_01:Spin Master
+ps_alchemy_action_roll_02:Spin Master
+ps_alchemy_action_roll_03:Spin Master
+ps_alchemy_recipe_up_01:Eureka!
+ps_alchemy_item_power_up_01:Out of Thin Air
+rel_art_recipe_01:Improv Art
+rel_art_recipe_02:Pro Improv Art
+rel_art_gallery:1-Star Auto Art
+rel_art_skip_game_01:1-Star Auto Art
+rel_art_skip_game_02:2-Star Auto Art
+rel_art_skip_game_03:3-Star Auto Art
+rel_art_skip_game_04:4-Star Auto Art
+rel_art_skip_game_05:5-Star Auto Art
+abi_art_tension_01:Inspired
+abi_art_tension_02:In the Zone
+ps_art_speed_up_01:The Art of... Art?
+ps_art_recipe_special_01:Artist's Eye
+ps_art_recipe_special_02:Interior Designer
+ps_art_recipe_special_03:Exterior Designer
+ps_art_action_drumroll_01:Tap Master
+ps_art_action_drumroll_02:Tap Master
+ps_art_action_drumroll_03:Tap Master
+ps_art_action_longpress_01:Hold Master
+ps_art_action_longpress_02:Hold Master
+ps_art_action_longpress_03:Hold Master
+ps_art_recipe_up_01:Certified Artiste
+ps_art_item_power_up_01:Art Goes KA-BLAAAM!
+ps_hp_up_01:HP +
+ps_hp_up_02:HP +
+ps_hp_up_03:HP +
+ps_hp_up_04:HP +
+ps_sp_up_01:SP +
+ps_sp_up_02:SP +
+ps_sp_up_03:SP +
+ps_physical_offense_up_01:Attack +
+ps_physical_offense_up_02:Attack +
+ps_physical_offense_up_03:Attack +
+ps_physical_offense_up_04:Attack +
+ps_physical_offense_up_05:Attack +
+ps_physical_offense_up_06:Attack +
+ps_physical_offense_up_07:Attack +
+ps_physical_offense_up_08:Attack +
+ps_physical_offense_up_09:Attack +
+ps_physical_defense_up_01:Defense +
+ps_physical_defense_up_02:Defense +
+ps_physical_defense_up_03:Defense +
+ps_physical_defense_up_04:Defense +
+ps_physical_defense_up_05:Defense +
+ps_physical_defense_up_06:Defense +
+ps_magic_offense_up_01:Magic Attack +
+ps_magic_offense_up_02:Magic Attack +
+ps_magic_offense_up_03:Magic Attack +
+ps_magic_offense_up_04:Magic Attack +
+ps_magic_offense_up_05:Magic Attack +
+ps_magic_offense_up_06:Magic Attack +
+ps_magic_defense_up_01:Magic Defense +
+ps_magic_defense_up_02:Magic Defense +
+ps_magic_defense_up_03:Magic Defense +
+ps_magic_defense_up_04:Magic Defense +
+ps_magic_defense_up_05:Magic Defense +
+ps_magic_defense_up_06:Magic Defense +
+ps_mining_up_01:Mining +
+ps_mining_up_02:Mining +
+ps_mining_up_03:Mining +
+ps_mining_up_04:Mining +
+ps_mining_up_05:Mining +
+ps_felling_up_01:Woodcutting +
+ps_felling_up_02:Woodcutting +
+ps_felling_up_03:Woodcutting +
+ps_felling_up_04:Woodcutting +
+ps_felling_up_05:Woodcutting +
+ps_fishing_up_01:Fishing +
+ps_fishing_up_02:Fishing +
+ps_fishing_up_03:Fishing +
+ps_fishing_up_04:Fishing +
+ps_fishing_up_05:Fishing +
+ps_harvest_up_01:Farming +
+ps_harvest_up_02:Farming +
+ps_harvest_up_03:Farming +
+ps_harvest_up_04:Farming +
+ps_harvest_up_05:Farming +
+ps_cook_up_01:Cooking +
+ps_cook_up_02:Cooking +
+ps_cook_up_03:Cooking +
+ps_cook_up_04:Cooking +
+ps_cook_up_05:Cooking +
+ps_cook_up_06:Cooking +
+ps_blacksmith_up_01:Smithing +
+ps_blacksmith_up_02:Smithing +
+ps_blacksmith_up_03:Smithing +
+ps_blacksmith_up_04:Smithing +
+ps_blacksmith_up_05:Smithing +
+ps_blacksmith_up_06:Smithing +
+ps_sewing_up_01:Sewing +
+ps_sewing_up_02:Sewing +
+ps_sewing_up_03:Sewing +
+ps_sewing_up_04:Sewing +
+ps_sewing_up_05:Sewing +
+ps_sewing_up_06:Sewing +
+ps_carpenter_up_01:Carpentry +
+ps_carpenter_up_02:Carpentry +
+ps_carpenter_up_03:Carpentry +
+ps_carpenter_up_04:Carpentry +
+ps_carpenter_up_05:Carpentry +
+ps_carpenter_up_06:Carpentry +
+ps_alchemy_up_01:Alchemy +
+ps_alchemy_up_02:Alchemy +
+ps_alchemy_up_03:Alchemy +
+ps_alchemy_up_04:Alchemy +
+ps_alchemy_up_05:Alchemy +
+ps_alchemy_up_06:Alchemy +
+ps_art_up_01:Artistry +
+ps_art_up_02:Artistry +
+ps_art_up_03:Artistry +
+ps_art_up_04:Artistry +
+ps_art_up_05:Artistry +
+ps_art_up_06:Artistry +
+ps_critical_up_01:Critical Rate +
+ps_critical_up_02:Critical Rate +
+ps_critical_up_03:Critical Rate +
+ps_critical_up_04:Critical Rate +
+ps_critical_damage_up_01:Critical Damage +
+ps_critical_damage_up_02:Critical Damage +
+ps_critical_damage_up_03:Critical Damage +
+ps_critical_damage_up_04:Critical Damage +
+ps_critical_evasion_up_01:Critical Evade +
+ps_critical_evasion_up_02:Critical Evade +
+ps_critical_evasion_up_03:Critical Evade +
+ps_critical_evasion_up_04:Critical Evade +
+ps_critical_evasion_up_05:Critical Evade +
+ps_charge_time_reduce_01:Charge Time Reduced
+ps_charge_time_reduce_02:Charge Time Reduced
+ps_charge_time_reduce_03:Charge Time Reduced
+ps_charge_technic_damage_up_01:Charge Attack Damage +
+ps_tension_increase_up_01:Special Charge +
+ps_tension_increase_up_02:Special Charge +
+ps_tension_increase_up_03:Special Charge +
+ps_tension_damage_up_01:Special Attack Damage +
+ps_tension_damage_up_02:Special Attack Damage +
+ps_tension_damage_up_03:Special Attack Damage +
+ps_tension_damage_up_04:Special Attack Damage +
+ps_tension_damage_up_05:Special Attack Damage +
+ps_attribute_damage_up_01_01:Fire Damage +
+ps_attribute_damage_up_02_01:Water Damage +
+ps_attribute_damage_up_03_01:Wind Damage +
+ps_attribute_damage_up_04_01:Earth Damage +
+ps_attribute_damage_up_05_01:Light Damage +
+ps_attribute_damage_up_06_01:Dark Damage +
+ps_attribute_resist_up_01_01:Fire Resistance
+ps_attribute_resist_up_02_01:Water Resistance
+ps_attribute_resist_up_03_01:Wind Resistance
+ps_attribute_resist_up_04_01:Earth Resistance
+ps_attribute_resist_up_05_01:Light Resistance
+ps_attribute_resist_up_06_01:Dark Resistance
+ps_damage_alleviation_01:Damage Reduced
+ps_damage_cut_01:Damage Reduced
+ps_sp_recovery_up_01:SP Recovery +
+ps_sp_recovery_up_02:SP Recovery +
+ps_collect_sp_down_01:Gathering SP Reduced
+ps_collect_sp_down_02:Gathering SP Reduced
+ps_collect_sp_down_03:Gathering SP Reduced
+ps_collect_sp_down_04:Gathering SP Reduced
+ps_sweetspot_damage_up_01:Sweet Spot Damage +
+ps_sweetspot_damage_up_02:Sweet Spot Damage +
+ps_sweetspot_damage_up_03:Sweet Spot Damage +
+ps_sweetspot_damage_up_04:Sweet Spot Damage +
+ps_navi_damage_up_01:Dig-Dig Detector +
+ps_navi_damage_up_02:Dig-Dig Detector +
+ps_navi_damage_up_03:Dig-Dig Detector +
+ps_navi_damage_up_04:Dig-Dig Detector +
+ps_grant_up_poisoned_01:Poison Chance +
+ps_grant_up_paralyzed_01:Paralyze Chance +
+ps_grant_up_asleep_01:Sleep Chance +
+ps_resist_up_frozen_01:Frostbite Resistance
+ps_resist_up_burning_01:Burn Resistance
+ps_resist_up_poisoned_01:Poison Resistance
+ps_resist_up_paralyzed_01:Paralyze Resistance
+ps_drop_item_up01:Item Drop Rate +
+ps_drop_item_up02:Item Drop Rate +
+ps_gain_rich_up01:Dosh Drop Rate +
+ps_gain_exp_up01:EXP Earned +
+ps_cook_exp_up_01:EXP Earned +
+ps_cook_exp_up_02:EXP Earned +
+ps_blacksmith_exp_up_01:EXP Earned +
+ps_blacksmith_exp_up_02:EXP Earned +
+ps_carpenter_exp_up_01:EXP Earned +
+ps_carpenter_exp_up_02:EXP Earned +
+ps_sewing_exp_up_03:EXP Earned +
+ps_sewing_exp_up_04:EXP Earned +
+ps_alchemy_exp_up_01:EXP Earned +
+ps_alchemy_exp_up_02:EXP Earned +
+ps_art_exp_up_03:EXP Earned +
+ps_art_exp_up_04:EXP Earned +
+ps_gain_all_exp_up01:EXP Earned +
+ps_gain_all_exp_up02:EXP Earned +
+ps_gain_all_exp_up03:EXP Earned +
+ps_gain_all_exp_up04:EXP Earned +
+ps_cook_time_extension_01:Craft Time Bonus
+ps_cook_time_extension_02:Craft Time Bonus
+ps_cook_time_extension_03:Craft Time Bonus
+ps_cook_time_extension_04:Craft Time Bonus
+ps_blacksmith_time_extension_01:Craft Time Bonus
+ps_blacksmith_time_extension_02:Craft Time Bonus
+ps_blacksmith_time_extension_03:Craft Time Bonus
+ps_blacksmith_time_extension_04:Craft Time Bonus
+ps_carpenter_time_extension_01:Craft Time Bonus
+ps_carpenter_time_extension_02:Craft Time Bonus
+ps_carpenter_time_extension_03:Craft Time Bonus
+ps_carpenter_time_extension_04:Craft Time Bonus
+ps_sewing_time_extension_01:Craft Time Bonus
+ps_sewing_time_extension_02:Craft Time Bonus
+ps_sewing_time_extension_03:Craft Time Bonus
+ps_sewing_time_extension_04:Craft Time Bonus
+ps_alchemy_time_extension_01:Craft Time Bonus
+ps_alchemy_time_extension_02:Craft Time Bonus
+ps_alchemy_time_extension_03:Craft Time Bonus
+ps_alchemy_time_extension_04:Craft Time Bonus
+ps_art_time_extension_01:Craft Time Bonus
+ps_art_time_extension_02:Craft Time Bonus
+ps_art_time_extension_03:Craft Time Bonus
+ps_art_time_extension_04:Craft Time Bonus
+ps_just_avoid:None
+ps_just_guard:None
+es_attack_up01:Attack +
+es_attack_up02:Attack +
+es_attack_up03:Attack +
+es_attack_up04:Attack +
+es_attack_up05:Attack +
+es_attack_up06:Attack +
+es_magic_attack_up01:Magic Attack +
+es_magic_attack_up02:Magic Attack +
+es_magic_attack_up03:Magic Attack +
+es_magic_attack_up04:Magic Attack +
+es_magic_attack_up05:Magic Attack +
+es_elements_attack_up01:Elemental Damage +
+es_elements_fire_attack_up01:Fire Damage +　
+es_elements_fire_attack_up02:Fire Damage +　
+es_elements_water_attack_up01:Water Damage +　
+es_elements_water_attack_up02:Water Damage +　
+es_elements_wind_attack_up01:Wind Damage +　
+es_elements_wind_attack_up02:Wind Damage +　
+es_elements_earth_attack_up01:Earth Damage +　
+es_elements_earth_attack_up02:Earth Damage +　
+es_elements_light_attack_up01:Light Damage +　
+es_elements_light_attack_up02:Light Damage +　
+es_elements_dark_attack_up01:Dark Damage +　
+es_elements_dark_attack_up02:Dark Damage +　
+es_tension_attack_up01:Special Skill Boost +
+es_tension_attack_up02:Special Skill Boost +
+es_tension_attack_up03:Special Skill Boost +
+es_tension_attack_up04:Special Skill Boost +
+es_tension_attack_up05:Special Skill Boost +
+es_tension_attack_up06:Special Skill Boost +
+es_defense_up01:Defense +
+es_defense_up02:Defense +
+es_defense_up03:Defense +
+es_defense_up04:Defense +
+es_defense_up05:Defense +
+es_magic_defense_up01:Magic Defense +
+es_magic_defense_up02:Magic Defense +
+es_magic_defense_up03:Magic Defense +
+es_magic_defense_up04:Magic Defense +
+es_magic_defense_up05:Magic Defense +
+es_guard_up01:Guard +
+es_guard_up02:Guard +
+es_guard_up03:Guard +
+es_fire_defense_up01:Fire Resistance
+es_fire_defense_up02:Fire Resistance
+es_fire_defense_up03:Fire Resistance
+es_fire_defense_up04:Fire Resistance
+es_water_defense_up01:Water Resistance
+es_water_defense_up02:Water Resistance
+es_water_defense_up03:Water Resistance
+es_water_defense_up04:Water Resistance
+es_wind_defense_up01:Wind Resistance
+es_wind_defense_up02:Wind Resistance
+es_wind_defense_up03:Wind Resistance
+es_wind_defense_up04:Wind Resistance
+es_earth_defense_up01:Earth Resistance
+es_earth_defense_up02:Earth Resistance
+es_earth_defense_up03:Earth Resistance
+es_earth_defense_up04:Earth Resistance
+es_light_defense_up01:Light Resistance
+es_light_defense_up02:Light Resistance
+es_light_defense_up03:Light Resistance
+es_light_defense_up04:Light Resistance
+es_dark_defense_up01:Dark Resistance
+es_dark_defense_up02:Dark Resistance
+es_dark_defense_up03:Dark Resistance
+es_dark_defense_up04:Dark Resistance
+es_elements_defense_up01:Elemental Resistance
+es_hp_up01:HP +
+es_hp_up02:HP +
+es_hp_up03:HP +
+es_hp_up04:HP +
+es_hp_up05:HP +
+es_hp_up06:HP +
+es_hp_up07:HP +
+es_sp_up01:SP +
+es_sp_up02:SP +
+es_sp_up03:SP +
+es_sp_up04:SP +
+es_sp_up05:SP +
+es_sp_up06:SP +
+es_sp_up07:SP +
+es_sp_up08:SP +
+es_sp_up09:SP +
+es_critical_damage_up01:Critical Damage +
+es_critical_damage_up02:Critical Damage +
+es_charge_time_reduce01:Charge Time Reduced
+es_charge_time_reduce02:Charge Time Reduced
+es_charge_damage_up01:Charge Attack Damage +
+es_charge_damage_up02:Charge Attack Damage +
+es_charge_damage_up03:Charge Attack Damage +
+es_charge_damage_up04:Charge Attack Damage +
+es_burn_up01:Burn Chance +
+es_burn_up02:Burn Chance +
+es_burn_up03:Burn Chance +
+es_frostbite_up01:Frostbite Chance +
+es_frostbite_up02:Frostbite Chance +
+es_frostbite_up03:Frostbite Chance +
+es_poison_up01:Poison Chance +
+es_poison_up02:Poison Chance +
+es_poison_up03:Poison Chance +
+es_paralysis_up01:Paralyze Chance +
+es_paralysis_up02:Paralyze Chance +
+es_paralysis_up03:Paralyze Chance +
+es_sleep_up01:Sleep Chance +
+es_sleep_up02:Sleep Chance +
+es_sleep_up03:Sleep Chance +
+es_burn_defense_up01:Burn Resistance
+es_frostbite_defense_up01:Frostbite Resistance
+es_poison_defense_up01:Poison Resistance
+es_paralysis_defense_up01:Paralyze Resistance
+es_damage_alleviation_01:Damage Reduced
+es_damage_alleviation_02:Damage Reduced
+es_damage_alleviation_03:Damage Reduced
+es_mining_up01:Mining +
+es_mining_up02:Mining +
+es_mining_up03:Mining +
+es_mining_up04:Mining +
+es_mining_up05:Mining +
+es_mining_up06:Mining +
+es_felling_up01:Woodcutting +
+es_felling_up02:Woodcutting +
+es_felling_up03:Woodcutting +
+es_felling_up04:Woodcutting +
+es_felling_up05:Woodcutting +
+es_felling_up06:Woodcutting +
+es_fishing_up01:Fishing +
+es_fishing_up02:Fishing +
+es_fishing_up03:Fishing +
+es_fishing_up04:Fishing +
+es_fishing_up05:Fishing +
+es_fishing_up06:Fishing +
+es_harvest_up01:Farming +
+es_harvest_up02:Farming +
+es_harvest_up03:Farming +
+es_harvest_up04:Farming +
+es_harvest_up05:Farming +
+es_harvest_up06:Farming +
+es_blacksmith_up01:Smithing +
+es_blacksmith_up02:Smithing +
+es_blacksmith_up03:Smithing +
+es_blacksmith_up04:Smithing +
+es_blacksmith_up05:Smithing +
+es_blacksmith_up06:Smithing +
+es_sewing_up01:Sewing +
+es_sewing_up02:Sewing +
+es_sewing_up03:Sewing +
+es_sewing_up04:Sewing +
+es_sewing_up05:Sewing +
+es_sewing_up06:Sewing +
+es_woodworking_up01:Carpentry +
+es_woodworking_up02:Carpentry +
+es_woodworking_up03:Carpentry +
+es_woodworking_up04:Carpentry +
+es_woodworking_up05:Carpentry +
+es_woodworking_up06:Carpentry +
+es_cooking_up01:Cooking +
+es_cooking_up02:Cooking +
+es_cooking_up03:Cooking +
+es_cooking_up04:Cooking +
+es_cooking_up05:Cooking +
+es_cooking_up06:Cooking +
+es_alchemy_up01:Alchemy +
+es_alchemy_up02:Alchemy +
+es_alchemy_up03:Alchemy +
+es_alchemy_up04:Alchemy +
+es_alchemy_up05:Alchemy +
+es_alchemy_up06:Alchemy +
+es_art_up01:Artistry +
+es_art_up02:Artistry +
+es_art_up03:Artistry +
+es_art_up04:Artistry +
+es_art_up05:Artistry +
+es_art_up06:Artistry +
+es_spot_attack_up01:Sweet Spot Damage +
+es_spot_attack_up02:Sweet Spot Damage +
+es_spot_attack_up03:Sweet Spot Damage +
+es_spot_attack_up04:Sweet Spot Damage +
+es_navi_attack_up01:Dig-Dig Detector +
+es_navi_attack_up02:Dig-Dig Detector +
+es_navi_attack_up03:Dig-Dig Detector +
+es_navi_attack_up04:Dig-Dig Detector +
+es_craft_time_extension_01:Craft Time Bonus
+es_craft_time_extension_02:Craft Time Bonus
+es_craft_time_extension_03:Craft Time Bonus
+es_craft_time_extension_04:Craft Time Bonus
+es_craft_tension_up_01:Crafting Charge +
+es_craft_tension_up_02:Crafting Charge +
+es_craft_tension_up_03:Crafting Charge +
+es_craft_tension_up_04:Crafting Charge +
+es_craft_exp_up_01:EXP Earned +
+es_craft_exp_up_02:EXP Earned +
+es_craft_exp_up_03:EXP Earned +
+es_craft_exp_up_04:EXP Earned +
+es_collect_sp_down_01:Efficient Gathering
+es_collect_sp_down_02:Efficient Gathering
+es_collect_sp_down_03:Efficient Gathering
+es_collect_sp_down_04:Efficient Gathering
+es_gain_rich_up01:Dosh Drop Rate +
+es_gain_rich_up02:Dosh Drop Rate +
+es_gain_all_exp_up01:EXP Earned +
+es_gain_all_exp_up02:EXP Earned +
+es_drop_item_up01:Item Drop Rate +
+es_drop_item_up02:Item Drop Rate +
+es_category_match_damage_tree_01:Broadleaf Wood Harvester
+es_category_match_damage_tree_02:Conifer Wood Harvester
+es_category_match_damage_tree_03:Palm Wood Harvester
+es_category_match_damage_deposit_01:Metal Harvester
+es_category_match_damage_deposit_02:Gem Harvester
+es_category_match_damage_deposit_03:Fossil Harvester
+es_category_match_damage_fish_01:River Fish Harvester
+es_category_match_damage_fish_02:Sea Fish Harvester
+es_category_match_damage_fish_03:Cave Fish Harvester
+es_category_match_damage_vegetable_01:Root Vegetable Harvester
+es_category_match_damage_vegetable_02:Leafy Greens Harvester
+es_category_match_damage_vegetable_03:Fruit Harvester
+es_recipe_up_cook_01:Meat Dish Crafter
+es_recipe_up_cook_02:Stew Crafter
+es_recipe_up_cook_03:Seafood Crafter
+es_recipe_up_cook_04:Platter Crafter
+es_recipe_up_cook_05:Egg Dish Crafter
+es_recipe_up_cook_06:Dessert Crafter
+es_recipe_up_cook_07:Vegetable Dish Crafter
+es_recipe_up_blacksmith_01:Metal Weapon Crafter
+es_recipe_up_blacksmith_02:Metal Tool Crafter
+es_recipe_up_blacksmith_03:Metal Armor Crafter
+es_recipe_up_blacksmith_04:Beast Skin Armor Crafter
+es_recipe_up_blacksmith_05:Blacksmith Object Crafter
+es_recipe_up_carpenter_01:Wooden Weapon Crafter
+es_recipe_up_carpenter_02:Wooden Tool Crafter
+es_recipe_up_carpenter_03:Wooden Object Crafter
+es_recipe_up_sewing_01:Fabric Armor Crafter
+es_recipe_up_sewing_02:Stylish Garment Crafter
+es_recipe_up_sewing_03:Cape Crafter
+es_recipe_up_sewing_04:Carpet Crafter
+es_recipe_up_sewing_05:Tailor Object Crafter
+es_recipe_up_alchemy_01:Flask Crafter
+es_recipe_up_alchemy_02:Accessory Crafter
+es_recipe_up_alchemy_03:Bomb Crafter
+es_recipe_up_alchemy_04:Alchemy Object Crafter
+es_recipe_up_art_01:Wall and Floor Crafter
+es_recipe_up_art_02:Painting Crafter
+es_recipe_up_art_03:Sculpture Crafter
+es_recipe_up_art_04:Plant Art Crafter
+es_recipe_up_art_05:Indoor Furniture Crafter
+es_recipe_up_art_06:Outdoor Furniture Crafter
+es_attack_magicattack_up01:Attack/Magic Attack +
+es_collect_up01:Gathering +
+es_production_up01:Craft +
+es_collect_up_add01:Gathering +
+es_collect_up_add02:Gathering +
+es_collect_up_add03:Gathering +
+es_collect_up_add04:Gathering +
+es_collect_up_add05:Gathering +
+es_collect_up_add06:Gathering +
+es_production_up_add01:Craft +
+es_production_up_add02:Craft +
+es_production_up_add03:Craft +
+es_production_up_add04:Craft +
+es_production_up_add05:Craft +
+es_production_up_add06:Craft +
+es_tension_increase_up_01:Special Charge +
+es_tension_increase_up_02:Special Charge +
+es_tension_increase_up_03:Special Charge +
+es_tension_increase_up_04:Special Charge +
+es_critical_evasion_up_01:Critical Evade +
+es_critical_evasion_up_02:Critical Evade +
+es_critical_evasion_up_03:Critical Evade +
+es_critical_evasion_up_04:Critical Evade +
+es_inflicts_frostbite:Inflicts Frostbite
+es_inflicts_burn:Inflicts Burn
+es_inflicts_poison:Inflicts Poison
+es_inflicts_paralysis:Inflicts Paralysis
+es_inflicts_sleep:Inflicts Sleep
+ls_hp_up_01:+<SKILL_PARAM_1> HP
+ls_hp_up_02:+<SKILL_PARAM_1> HP
+ls_hp_up_03:+<SKILL_PARAM_1> HP
+ls_hp_up_04:+<SKILL_PARAM_1> HP
+ls_hp_up_05:+<SKILL_PARAM_1> HP
+ls_sp_up_01:+<SKILL_PARAM_1> SP
+ls_sp_up_02:+<SKILL_PARAM_1> SP
+ls_sp_up_03:+<SKILL_PARAM_1> SP
+ls_sp_up_04:+<SKILL_PARAM_1> SP
+ls_sp_up_05:+<SKILL_PARAM_1> SP
+ls_sp_up_06:+<SKILL_PARAM_1> SP
+ls_physical_offense_up_01:+<SKILL_PARAM_1> Attack Damage
+ls_physical_offense_up_02:+<SKILL_PARAM_1> Attack Damage
+ls_physical_offense_up_03:+<SKILL_PARAM_1> Attack Damage
+ls_physical_offense_up_04:+<SKILL_PARAM_1> Attack Damage
+ls_physical_offense_up_05:+<SKILL_PARAM_1> Attack Damage
+ls_physical_offense_up_06:+<SKILL_PARAM_1> Attack Damage
+ls_magic_offense_up_01:+<SKILL_PARAM_1> Magic Attack Damage
+ls_magic_offense_up_02:+<SKILL_PARAM_1> Magic Attack Damage
+ls_magic_offense_up_03:+<SKILL_PARAM_1> Magic Attack Damage
+ls_magic_offense_up_04:+<SKILL_PARAM_1> Magic Attack Damage
+ls_magic_offense_up_05:+<SKILL_PARAM_1> Magic Attack Damage
+ls_magic_offense_up_06:+<SKILL_PARAM_1> Magic Attack Damage
+ls_physical_defense_up_01:+<SKILL_PARAM_1> Defense
+ls_physical_defense_up_02:+<SKILL_PARAM_1> Defense
+ls_physical_defense_up_03:+<SKILL_PARAM_1> Defense
+ls_physical_defense_up_04:+<SKILL_PARAM_1> Defense
+ls_physical_defense_up_05:+<SKILL_PARAM_1> Defense
+ls_physical_defense_up_06:+<SKILL_PARAM_1> Defense
+ls_magic_defense_up_01:+<SKILL_PARAM_1> Magic Defense
+ls_magic_defense_up_02:+<SKILL_PARAM_1> Magic Defense
+ls_magic_defense_up_03:+<SKILL_PARAM_1> Magic Defense
+ls_magic_defense_up_04:+<SKILL_PARAM_1> Magic Defense
+ls_magic_defense_up_05:+<SKILL_PARAM_1> Magic Defense
+ls_magic_defense_up_06:+<SKILL_PARAM_1> Magic Defense
+ls_damage_alleviation_01:-<SKILL_PARAM_1> Damage Reduction
+ls_damage_alleviation_02:-<SKILL_PARAM_1> Damage Reduction
+ls_damage_alleviation_03:-<SKILL_PARAM_1> Damage Reduction
+ls_damage_alleviation_04:-<SKILL_PARAM_1> Damage Reduction
+ls_damage_alleviation_05:-<SKILL_PARAM_1> Damage Reduction
+ls_damage_alleviation_06:-<SKILL_PARAM_1> Damage Reduction
+ls_critical_up_01:+<SKILL_PARAM_1>% Critical Rate
+ls_critical_up_02:+<SKILL_PARAM_1>% Critical Rate
+ls_critical_up_03:+<SKILL_PARAM_1>% Critical Rate
+ls_critical_damage_up_01:+<SKILL_PARAM_1>% Critical Damage
+ls_charge_technic_damage_up_01:+<SKILL_PARAM_1>% Charge Attack Damage
+ls_charge_technic_damage_up_02:+<SKILL_PARAM_1>% Charge Attack Damage
+ls_charge_time_reduce_01:-<SKILL_PARAM_1>% Charge-up Time (Charge Attack)
+ls_charge_time_reduce_02:-<SKILL_PARAM_1>% Charge-up Time (Charge Attack)
+ls_tension_damage_up_01:+<SKILL_PARAM_1>% Special Damage Boost
+ls_tension_damage_up_02:+<SKILL_PARAM_1>% Special Damage Boost
+ls_tension_increase_up_01:+<SKILL_PARAM_1>% Special Charge Boost
+ls_tension_increase_up_02:+<SKILL_PARAM_1>% Special Charge Boost
+ls_tension_increase_up_03:+<SKILL_PARAM_1>% Special Charge Boost
+ls_tension_increase_up_04:+<SKILL_PARAM_1>% Special Charge Boost
+ls_tension_increase_up_05:+<SKILL_PARAM_1>% Special Charge Boost
+ls_tension_increase_up_06:+<SKILL_PARAM_1>% Special Charge Boost
+ls_mining_up_01:+<SKILL_PARAM_1> Mining
+ls_mining_up_02:+<SKILL_PARAM_1> Mining
+ls_mining_up_03:+<SKILL_PARAM_1> Mining
+ls_mining_up_04:+<SKILL_PARAM_1> Mining
+ls_mining_up_05:+<SKILL_PARAM_1> Mining
+ls_mining_up_06:+<SKILL_PARAM_1> Mining
+ls_felling_up_01:+<SKILL_PARAM_1> Woodcutting
+ls_felling_up_02:+<SKILL_PARAM_1> Woodcutting
+ls_felling_up_03:+<SKILL_PARAM_1> Woodcutting
+ls_felling_up_04:+<SKILL_PARAM_1> Woodcutting
+ls_felling_up_05:+<SKILL_PARAM_1> Woodcutting
+ls_felling_up_06:+<SKILL_PARAM_1> Woodcutting
+ls_fishing_up_01:+<SKILL_PARAM_1> Fishing
+ls_fishing_up_02:+<SKILL_PARAM_1> Fishing
+ls_fishing_up_03:+<SKILL_PARAM_1> Fishing
+ls_fishing_up_04:+<SKILL_PARAM_1> Fishing
+ls_fishing_up_05:+<SKILL_PARAM_1> Fishing
+ls_fishing_up_06:+<SKILL_PARAM_1> Fishing
+ls_harvest_up_01:+<SKILL_PARAM_1> Harvesting
+ls_harvest_up_02:+<SKILL_PARAM_1> Harvesting
+ls_harvest_up_03:+<SKILL_PARAM_1> Harvesting
+ls_harvest_up_04:+<SKILL_PARAM_1> Harvesting
+ls_harvest_up_05:+<SKILL_PARAM_1> Harvesting
+ls_harvest_up_06:+<SKILL_PARAM_1> Harvesting
+ls_sweetspot_damage_up_01:+<SKILL_PARAM_1>% Sweet Spot Damage
+ls_navi_damage_up_01:+<SKILL_PARAM_1>% Dig-Dig Detector Damage
+ls_collect_sp_down_01:-<SKILL_PARAM_1>% SP Cost for Gathering
+ls_collect_sp_down_02:-<SKILL_PARAM_1>% SP Cost for Gathering
+ls_category_match_damage_tree_01:+<SKILL_PARAM_2>% Damage to Broadleaf Trees
+ls_category_match_damage_tree_02:+<SKILL_PARAM_2>% Damage to Conifer Trees
+ls_category_match_damage_tree_03:+<SKILL_PARAM_2>% Damage to Tropical Trees
+ls_category_match_damage_deposit_01:+<SKILL_PARAM_2>% Damage to Metals
+ls_category_match_damage_deposit_02:+<SKILL_PARAM_2>% Damage to Gemstones
+ls_category_match_damage_deposit_03:+<SKILL_PARAM_2>% Damage to Fossils
+ls_category_match_damage_fish_01:+<SKILL_PARAM_2>% Damage to River Fish
+ls_category_match_damage_fish_02:+<SKILL_PARAM_2>% Damage to Sea Fish
+ls_category_match_damage_fish_03:+<SKILL_PARAM_2>% Damage to Cave Fish
+ls_category_match_damage_vegetable_01:+<SKILL_PARAM_2>% Damage to Root Vegetables
+ls_category_match_damage_vegetable_02:+<SKILL_PARAM_2>% Damage to Leafy Greens
+ls_category_match_damage_vegetable_03:+<SKILL_PARAM_2>% Damage to Fruits
+ls_gain_all_exp_up01:+<SKILL_PARAM_1>% Additional EXP
+ls_gain_all_exp_up02:+<SKILL_PARAM_1>% Additional EXP
+ls_gain_all_exp_up03:+<SKILL_PARAM_1>% Additional EXP
+ls_gain_all_exp_up04:+<SKILL_PARAM_1>% Additional EXP
+ls_gain_all_exp_up05:+<SKILL_PARAM_1>% Additional EXP
+ls_gain_all_exp_up06:+<SKILL_PARAM_1>% Additional EXP
+ls_drop_item_up01:+<SKILL_PARAM_1>% Item Drop Rate
+ls_drop_item_up02:+<SKILL_PARAM_1>% Item Drop Rate
+ls_drop_item_up03:+<SKILL_PARAM_1>% Item Drop Rate
+ls_drop_item_up04:+<SKILL_PARAM_1>% Item Drop Rate
+ls_drop_item_up05:+<SKILL_PARAM_1>% Item Drop Rate
+ls_fire_defense_up01:+<SKILL_PARAM_1> Fire Resistance
+ls_fire_defense_up02:+<SKILL_PARAM_1> Fire Resistance
+ls_wind_defense_up01:+<SKILL_PARAM_1> Wind Resistance
+ls_wind_defense_up02:+<SKILL_PARAM_1> Wind Resistance
+ls_water_defense_up01:+<SKILL_PARAM_1> Water Resistance
+ls_water_defense_up02:+<SKILL_PARAM_1> Water Resistance
+ls_earth_defense_up01:+<SKILL_PARAM_1> Earth Resistance
+ls_earth_defense_up02:+<SKILL_PARAM_1> Earth Resistance
+ls_light_defense_up01:+<SKILL_PARAM_1> Light Resistance
+ls_light_defense_up02:+<SKILL_PARAM_1> Light Resistance
+ls_dark_defense_up01:+<SKILL_PARAM_1> Dark Resistance
+ls_dark_defense_up02:+<SKILL_PARAM_1> Dark Resistance
+ls_critical_evasion_up_01:+<SKILL_PARAM_1>% Critical Evasion Rate
+ls_critical_evasion_up_02:+<SKILL_PARAM_1>% Critical Evasion Rate
+ls_critical_evasion_up_03:+<SKILL_PARAM_1>% Critical Evasion Rate
+ls_critical_evasion_up_04:+<SKILL_PARAM_1>% Critical Evasion Rate
+ls_guard_up01:+<SKILL_PARAM_1>% Guard Strength
+ls_guard_up02:+<SKILL_PARAM_1>% Guard Strength
+ls_guard_up03:+<SKILL_PARAM_1>% Guard Strength
+ls_frostbite_up01:+<SKILL_PARAM_1>% Chance of Inflicting Frostbite
+ls_paralysis_up01:+<SKILL_PARAM_1>% Chance of Inflicting Paralysis
+ls_burn_up01:+<SKILL_PARAM_1>% Chance of Inflicting Burn
+ls_sleep_up01:+<SKILL_PARAM_1>% Chance of Inflicting Sleep
+ls_poison_up01:+<SKILL_PARAM_1>% Chance of Inflicting Poison
+as_life0001_chr000100_special01:Blessed Slash
+ps_life0001_chr000100_passive01:Plucky Princess
+ps_life0001_chr000100_passive02:Dazzling Apple
+as_life0001_chr000500_special01:Raging Thunder
+ps_life0001_chr000500_passive01:A Pirate's Pride
+ps_life0001_chr000500_passive02:A Storm is Coming
+as_life0001_chr000700_special01:Dark Fortress
+ps_life0001_chr000700_passive01:Umbral Presence
+ps_life0001_chr000700_passive02:The Sultan's Shield
+as_life0001_chr000e00_special01:Flaming Mustache
+ps_life0001_chr000e00_passive01:Shining Armor
+ps_life0001_chr000e00_passive02:Experienced Leadership
+as_life0001_chr000f00_special01:Freezing Waltz
+ps_life0001_chr000f00_passive01:Swordsman of the Rime
+ps_life0001_chr000f00_passive02:Frost Saber
+as_life0001_chr001000_special01:Flower Flow
+ps_life0001_chr001000_passive01:An Extra Touch
+ps_life0001_chr001000_passive02:Nature's Protection
+as_life0002_chr000200_special01:Double Impact
+ps_life0002_chr000200_passive01:In Search of Strength
+ps_life0002_chr000200_passive02:Dragonslayer's Fang
+as_life0002_chr001100_special01:Seismic Slam
+ps_life0002_chr001100_passive01:Wolf's Hunger
+ps_life0002_chr001100_passive02:Call of the Land
+as_life0002_chr001200_special01:Frozen March
+ps_life0002_chr001200_passive01:Twinkling Stage
+ps_life0002_chr001200_passive02:Encore!
+as_life0002_chr001300_special01:Invigorating War Cry
+ps_life0002_chr001300_passive01:Adrenaline Junkie
+ps_life0002_chr001300_passive02:I Got This!
+as_life0003_chr000300_special01:Spirits of the Land!
+ps_life0003_chr000300_passive01:Secret Strength
+ps_life0003_chr000300_passive02:Guardian of the Forest
+as_life0003_chr001400_special01:Phoenix Arrow
+ps_life0003_chr001400_passive01:Fiery Reprisal
+ps_life0003_chr001400_passive02:Keeper of the Royal Garden
+as_life0003_chr001500_special01:Sonic Arrow
+ps_life0003_chr001500_passive01:Deadeye
+ps_life0003_chr001500_passive02:Breath of the Wind
+as_life0003_chr001600_special01:Acorn Cure
+ps_life0003_chr001600_passive01:Coddled Baby
+ps_life0003_chr001600_passive02:Coddled Baby No More
+as_life0004_chr000400_special01:Judgment
+ps_life0004_chr000400_passive01:Oracular Knowledge
+ps_life0004_chr000400_passive02:Sage's Power
+as_life0004_chr000600_special01:Double Demon Blast
+ps_life0004_chr000600_passive01:Boundless Magic
+ps_life0004_chr000600_passive02:The Young Sultan
+as_life0004_chr001700_special01:Absolute Zero
+ps_life0004_chr001700_passive01:Icy Grasp
+ps_life0004_chr001700_passive02:Lone Icewolf
+as_life0004_chr001800_special01:Too Bad, Wrong Answer!
+ps_life0004_chr001800_passive01:Pop Quiz!
+ps_life0004_chr001800_passive02:Law of the Flame
+as_life0004_chr001900_special01:Rejuvenating Wind
+ps_life0004_chr001900_passive01:Energizing Magic
+ps_life0004_chr001900_passive02:Sage of the Earth
+as_life0004_chr000800_special01:Star Scattershot
+ps_life0004_chr000800_passive01:Divine Child
+ps_life0004_chr000800_passive02:Wish Upon a Star
+as_life0005_chr001b00_special01:Ore Freeze
+ps_life0005_chr001b00_passive01:Cold and Calculated
+ps_life0005_chr001b00_passive02:With Wintry Passion
+as_life0005_chr001a00_special01:Earthshatter
+ps_life0005_chr001a00_passive01:Gaia's Whisper
+ps_life0005_chr001a00_passive02:Gaia's Calling
+as_life0005_chr000a00_special01:Diggin' the Dream
+ps_life0005_chr000a00_passive01:Let's Rock!
+ps_life0005_chr000a00_passive02:The Three Gs of Mining!
+as_life0006_chr000c00_special01:Will of the Earth
+ps_life0006_chr000c00_passive01:The Forest's Wisdom
+ps_life0006_chr000c00_passive02:A Breathing Forest
+as_life0006_chr001c00_special01:Beat of the Wild
+ps_life0006_chr001c00_passive01:Bear Sense
+ps_life0006_chr001c00_passive02:Mega Bear Sense
+as_life0006_chr001d00_special01:Mountain Gale
+ps_life0006_chr001d00_passive01:Briny Chop
+ps_life0006_chr001d00_passive02:Woodcutter's Pride
+as_life0007_chr001e00_special01:Stink Eye
+ps_life0007_chr001e00_passive01:Sailor's Instinct
+ps_life0007_chr001e00_passive02:Pirate's Inner Strength
+as_life0007_chr000b00_special01:Here Comes the Big Catch
+ps_life0007_chr000b00_passive01:Fishing Prodigy
+ps_life0007_chr000b00_passive02:Fish Fanatic
+as_life0007_chr001f00_special01:Sakura Flare
+ps_life0007_chr001f00_passive01:Hook-Set
+ps_life0007_chr001f00_passive02:Face-to-Fish
+as_life0008_chr002f00_special01:Harvest Hymn
+ps_life0008_chr002f00_passive01:Before the Cornies Come!
+ps_life0008_chr002f00_passive02:Before the Cornellas Come!
+as_life0008_chr002d00_special01:Beyond Our Differences
+ps_life0008_chr002d00_passive01:Forest-Dweller's Power
+ps_life0008_chr002d00_passive02:Live in Harmony
+as_life0008_chr003400_special01:Brother's Potential
+ps_life0008_chr003400_passive01:Elbow Grease!
+ps_life0008_chr003400_passive02:More Elbow Grease!
+abi_cook_chr000d00_tension_01:Field Kitchen
+ps_cook_chr000d00_recipe_up_01:Veggie Lover
+ps_cook_chr000d00_speed_up_01:Low and Slow
+abi_cook_chr002800_tension_01:Dinner Rush
+ps_cook_chr002800_recipe_up_01:Hamburg Meister
+ps_cook_chr002800_speed_up_01:Flying Frying Pans
+abi_cook_chr002900_tension_01:A Pinch of Love
+ps_cook_chr002900_recipe_up_01:Pro Pâtissier
+ps_cook_chr002900_speed_up_01:Jet-Speed Julienne
+abi_blacksmith_chr002000_tension_01:Devil's Blackiron
+ps_blacksmith_chr002000_recipe_up_01:Master of Weapons
+ps_blacksmith_chr002000_speed_up_01:Blue Devil of Castele
+abi_blacksmith_chr002100_tension_01:Bing Bang Bash
+ps_blacksmith_chr002100_recipe_up_01:Tool Tinkerer
+ps_blacksmith_chr002100_speed_up_01:Sneaky Splash
+abi_blacksmith_chr002200_tension_01:Hammer of Fury
+ps_blacksmith_chr002200_recipe_up_01:Armorsmithy
+ps_blacksmith_chr002200_speed_up_01:Vulcan's Hammer
+abi_carpenter_chr002300_tension_01:Talent and Ambition
+ps_carpenter_chr002300_recipe_up_01:Cutting Wind
+ps_carpenter_chr002300_speed_up_01:Smooth Cutting
+abi_carpenter_chr002400_tension_01:Cherry Charge
+ps_carpenter_chr002400_recipe_up_01:Awakened Saw
+ps_carpenter_chr002400_speed_up_01:Saw Meister
+abi_carpenter_chr002500_tension_01:Virescent Slice
+ps_carpenter_chr002500_recipe_up_01:From Wood to Weapon
+ps_carpenter_chr002500_speed_up_01:Expert Nail Drive
+abi_sewing_chr000900_tension_01:Dreamy Needle
+ps_sewing_chr000900_recipe_up_01:A Fluffy Finish
+ps_sewing_chr000900_speed_up_01:Speedy Snip-Snip
+abi_sewing_chr002600_tension_01:Royal Wave
+ps_sewing_chr002600_recipe_up_01:Noble Design
+ps_sewing_chr002600_speed_up_01:Graceful Sewing
+abi_sewing_chr002700_tension_01:Lovey-Dovey Sewing
+ps_sewing_chr002700_recipe_up_01:Carpet Weaver
+ps_sewing_chr002700_speed_up_01:Finishing Touch
+abi_alchemy_chr002a00_tension_01:Boom Goes the Alchemist
+ps_alchemy_chr002a00_recipe_up_01:An Explosive Personality
+ps_alchemy_chr002a00_speed_up_01:Chemical Combustion
+abi_alchemy_chr002b00_tension_01:Twilight Glory
+ps_alchemy_chr002b00_recipe_up_01:Alchemist of the Moon
+ps_alchemy_chr002b00_speed_up_01:Moonlit Cauldron
+abi_alchemy_chr002c00_tension_01:Enchanting Whisper
+ps_alchemy_chr002c00_recipe_up_01:Alchemist of Love
+ps_alchemy_chr002c00_speed_up_01:Recipe for Love
+abi_art_chr002e00_tension_01:Hidden Talent
+ps_art_chr002e00_recipe_up_01:Unexpected Deftness
+ps_art_chr002e00_speed_up_01:Brush Stroke of Genius
+abi_art_chr003100_tension_01:The Finishing Stroke
+ps_art_chr003100_recipe_up_01:An Eastern Touch
+ps_art_chr003100_speed_up_01:Tools Don't Make the Maker
+abi_art_chr003200_tension_01:Dance of the Shrine Maiden
+ps_art_chr003200_recipe_up_01:Spiritual Inspiration
+ps_art_chr003200_speed_up_01:Meditative Trance
+ps_npc_physical_offense_up_01:Attack +
+ps_npc_physical_offense_up_02:Attack +
+ps_npc_magic_offense_up_01:Magic Attack +
+ps_npc_magic_offense_up_02:Magic Attack +
+ps_npc_mining_up_01:Mining +
+ps_npc_mining_up_02:Mining +
+ps_npc_felling_up_01:Woodcutting +
+ps_npc_felling_up_02:Woodcutting +
+ps_npc_fishing_up_01:Fishing +
+ps_npc_fishing_up_02:Fishing +
+ps_npc_harvest_up_01:Farming +
+ps_npc_harvest_up_02:Farming +
+ps_npc_cook_up_01:Cooking +
+ps_npc_cook_up_02:Cooking +
+ps_npc_blacksmith_up_01:Smithing +
+ps_npc_blacksmith_up_02:Smithing +
+ps_npc_sewing_up_01:Sewing +
+ps_npc_sewing_up_02:Sewing +
+ps_npc_carpenter_up_01:Carpentry +
+ps_npc_carpenter_up_02:Carpentry +
+ps_npc_alchemy_up_01:Alchemy +
+ps_npc_alchemy_up_02:Alchemy +
+ps_npc_art_up_01:Artistry +
+ps_npc_art_up_02:Artistry +
+ps_equip_ex_battle:Polish Boost
+ps_equip_ex_gather:Polish Boost
+ps_equip_ex_craft:Polish Boost
+abi_cook_chr000d00_tension_01_Rogue:Field Kitchen
+ps_cook_chr000d00_recipe_up_01_Rogue:Veggie Lover
+ps_cook_chr000d00_speed_up_01_Rogue:Low and Slow
+abi_cook_chr002800_tension_01_Rogue:Dinner Rush
+ps_cook_chr002800_recipe_up_01_Rogue:Hamburg Meister
+ps_cook_chr002800_speed_up_01_Rogue:Flying Frying Pans
+abi_cook_chr002900_tension_01_Rogue:A Pinch of Love
+ps_cook_chr002900_recipe_up_01_Rogue:Pro Pâtissier
+ps_cook_chr002900_speed_up_01_Rogue:Jet-Speed Julienne
+abi_blacksmith_chr002000_tension_01_Rogue:Devil's Blackiron
+ps_blacksmith_chr002000_recipe_up_01_Rogue:Master of Weapons
+ps_blacksmith_chr002000_speed_up_01_Rogue:Blue Devil of Castele
+abi_blacksmith_chr002100_tension_01_Rogue:Bing Bang Bash
+ps_blacksmith_chr002100_recipe_up_01_Rogue:Tool Tinkerer
+ps_blacksmith_chr002100_speed_up_01_Rogue:Sneaky Splash
+abi_blacksmith_chr002200_tension_01_Rogue:Hammer of Fury
+ps_blacksmith_chr002200_recipe_up_01_Rogue:Armorsmithy
+ps_blacksmith_chr002200_speed_up_01_Rogue:Vulcan's Hammer
+abi_carpenter_chr002300_tension_01_Rogue:Talent and Ambition
+ps_carpenter_chr002300_recipe_up_01_Rogue:Cutting Wind
+ps_carpenter_chr002300_speed_up_01_Rogue:Smooth Cutting
+abi_carpenter_chr002400_tension_01_Rogue:Cherry Charge
+ps_carpenter_chr002400_recipe_up_01_Rogue:Awakened Saw
+ps_carpenter_chr002400_speed_up_01_Rogue:Saw Meister
+abi_carpenter_chr002500_tension_01_Rogue:Virescent Slice
+ps_carpenter_chr002500_recipe_up_01_Rogue:From Wood to Weapon
+ps_carpenter_chr002500_speed_up_01_Rogue:Expert Nail Drive
+abi_sewing_chr000900_tension_01_Rogue:Dreamy Needle
+ps_sewing_chr000900_recipe_up_01_Rogue:A Fluffy Finish
+ps_sewing_chr000900_speed_up_01_Rogue:Speedy Snip-Snip
+abi_sewing_chr002600_tension_01_Rogue:Royal Wave
+ps_sewing_chr002600_recipe_up_01_Rogue:Noble Design
+ps_sewing_chr002600_speed_up_01_Rogue:Graceful Sewing
+abi_sewing_chr002700_tension_01_Rogue:Lovey-Dovey Sewing
+ps_sewing_chr002700_recipe_up_01_Rogue:Carpet Weaver
+ps_sewing_chr002700_speed_up_01_Rogue:Finishing Touch
+abi_alchemy_chr002a00_tension_01_Rogue:Boom Goes the Alchemist
+ps_alchemy_chr002a00_recipe_up_01_Rogue:An Explosive Personality
+ps_alchemy_chr002a00_speed_up_01_Rogue:Chemical Combustion
+abi_alchemy_chr002b00_tension_01_Rogue:Twilight Glory
+ps_alchemy_chr002b00_recipe_up_01_Rogue:Alchemist of the Moon
+ps_alchemy_chr002b00_speed_up_01_Rogue:Moonlit Cauldron
+abi_alchemy_chr002c00_tension_01_Rogue:Enchanting Whisper
+ps_alchemy_chr002c00_recipe_up_01_Rogue:Alchemist of Love
+ps_alchemy_chr002c00_speed_up_01_Rogue:Recipe for Love
+abi_art_chr002e00_tension_01_Rogue:Hidden Talent
+ps_art_chr002e00_recipe_up_01_Rogue:Unexpected Deftness
+ps_art_chr002e00_speed_up_01_Rogue:Brush Stroke of Genius
+abi_art_chr003100_tension_01_Rogue:The Finishing Stroke
+ps_art_chr003100_recipe_up_01_Rogue:An Eastern Touch
+ps_art_chr003100_speed_up_01_Rogue:Tools Don't Make the Maker
+abi_art_chr003200_tension_01_Rogue:Dance of the Shrine Maiden
+ps_art_chr003200_recipe_up_01_Rogue:Spiritual Inspiration
+ps_art_chr003200_speed_up_01_Rogue:Meditative Trance
+es_overwrite_attack_element_attr_type_none:Element Removal
+es_overwrite_attack_element_attr_type_fire:Change Element: Fire
+es_overwrite_attack_element_attr_type_water:Change Element: Water
+es_overwrite_attack_element_attr_type_wind:Change Element: Wind
+es_overwrite_attack_element_attr_type_earth:Change Element: Earth
+es_overwrite_attack_element_attr_type_shine:Change Element: Light

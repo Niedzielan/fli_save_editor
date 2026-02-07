@@ -1,0 +1,5 @@
+## Config file for FANTASY LIFE i Save Editor
+itemlist=./itemlist.txt
+skilllist=./skilllist.txt
+flaglist=./flaglist.txt
+patternfile=./fli_sav_pattern.txt

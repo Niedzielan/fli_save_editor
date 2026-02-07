@@ -1,0 +1,2367 @@
+struct Str { // handle wide_strings
+s32 len;
+if (len < 0) {
+char16 wchar[-len];
+} else {
+char data[len];
+}
+};
+struct Name {
+Str inner;
+};
+struct Vector4 {
+double x;
+double y;
+double z;
+double w;
+};
+struct Vector3 {
+double x;
+double y;
+double z;
+};
+struct Vector2D {
+double x;
+double y;
+};
+struct Array<T> {
+u32 len;
+T data[len];
+};
+struct Set<T> {
+u32 len;
+T data[len];
+};
+struct Map_inner<T, T2> {
+T key;
+T2 value;
+};
+struct Map<T, T2> {
+u32 len;
+Map_inner<T, T2> pair[len];
+};
+struct ENum {
+u32 enum_val;
+};
+struct DateTime {
+u64 time;
+};
+struct Handle {
+s32 handle;
+};
+struct Byte {
+u8 byte;
+};
+struct Bool {
+u8 byte; //only 0 or 1?
+};
+struct IntVector {
+s32 x;
+s32 y;
+s32 z;
+};
+
+enum ERoguelikeStartAreaType : u8 {
+None = 0,
+Plain = 1,
+Desert = 2,
+Mountain = 3,
+Volcano = 4,
+Forest = 5,
+Island = 6,
+Num = 7,
+ERoguelikeStartAreaType_MAX = 8,
+};
+enum EMapIconType : u8 {
+None = 0,
+Player = 1,
+Tracks = 2,
+Enemy = 3,
+NPC = 4,
+ImportantNPC = 5,
+QuestDestination = 6,
+QuestOrder = 7,
+QuestAccepted = 8,
+QuestAchieved = 9,
+Spot = 10,
+House = 11,
+Guild = 12,
+Slope = 13,
+BridgeStraight = 14,
+BridgeDiagonal = 15,
+SilverCrownBoss = 16,
+GoldCrownBoss = 17,
+Logging = 18,
+LoggingBoss = 19,
+Fishing = 20,
+FishingBoss = 21,
+Miner = 22,
+MinerBoss = 23,
+Farm = 24,
+FarmBoss = 25,
+QuestDestinationSub = 26,
+SpotUnreleased = 27,
+StoryPorposePoint = 28,
+EnemyPorposePoint = 29,
+SilverCrownBossPorposePoint = 30,
+GoldCrownBossPorposePoint = 31,
+LoggingPorposePoint = 32,
+FishingPorposePoint = 33,
+MinerPorposePoint = 34,
+FarmPorposePoint = 35,
+PlantDungeon = 36,
+PlantDungeonEX = 37,
+PlantDungeonEXRewardNotReceived = 38,
+Death = 39,
+PartyChara = 40,
+Player1 = 41,
+Player2 = 42,
+Player3 = 43,
+Player4 = 44,
+Tracks1 = 45,
+Tracks2 = 46,
+Tracks3 = 47,
+Tracks4 = 48,
+WarpPoint = 49,
+Reclaim = 50,
+Unlock = 51,
+Elevator = 52,
+PlayerBalloon1 = 53,
+PlayerBalloon2 = 54,
+PlayerBalloon3 = 55,
+PlayerBalloon4 = 56,
+EquipShop = 57,
+ToolShop = 58,
+MaterialShop = 59,
+Inn = 60,
+Bar = 61,
+MasterPaladin = 62,
+MasterMercenary = 63,
+MasterHunter = 64,
+MasterMagician = 65,
+MasterMiner = 66,
+MasterWoodcutter = 67,
+MasterAngler = 68,
+MasterFarmer = 69,
+MasterCook = 70,
+MasterBlacksmith = 71,
+MasterCarpenter = 72,
+MasterTailor = 73,
+MasterAlchemist = 74,
+MasterArtist = 75,
+CircleAreaSmall = 76,
+CircleAreaMedium = 77,
+CircleAreaBig = 78,
+QuestOrderCurrentLife = 79,
+ToolAndMaterialShop = 80,
+InnAndMasterMercenary = 81,
+MasterCookAndRestaurant = 82,
+GuildAndMasterPaladin = 83,
+MasterBlacksmithAndMaterialShop = 84,
+InnAndBar = 85,
+MasterPaladinCurrentLife = 86,
+MasterMercenaryCurrentLife = 87,
+MasterHunterCurrentLife = 88,
+MasterMagicianCurrentLife = 89,
+MasterMinerCurrentLife = 90,
+MasterWoodcutterCurrentLife = 91,
+MasterAnglerCurrentLife = 92,
+MasterFarmerCurrentLife = 93,
+MasterCookCurrentLife = 94,
+MasterBlacksmithCurrentLife = 95,
+MasterCarpenterCurrentLife = 96,
+MasterTailorCurrentLife = 97,
+MasterAlchemistCurrentLife = 98,
+MasterArtistCurrentLife = 99,
+InnAndMasterMercenaryCurrentLife = 100,
+MasterCookCurrentLifeAndRestaurant = 101,
+GuildAndMasterPaladinCurrentLife = 102,
+MasterBlacksmithCurrentLifeAndMaterialShop = 103,
+ReclaimUnableRemoved = 104,
+UnlockUnableRemoved = 105,
+Obstacle = 106,
+ObstacleUnableRemoved = 107,
+PurposePin1 = 108,
+PurposePin2 = 109,
+PurposePin3 = 110,
+PurposePin4 = 111,
+PurposePin5 = 112,
+ActiveEventNormal = 113,
+ActiveEventLegendary = 114,
+ActiveEventGoldLegendary = 115,
+GoddessStatue = 116,
+PlantDungeonGoddessStatue = 117,
+Tower = 118,
+Shrine = 119,
+PlantLeafe = 120,
+FarmStand = 121,
+AnywhereGateMagicCircle = 122,
+RipeningAltar = 123,
+ActiveEventEnemy = 124,
+ActiveEventPick = 125,
+ActiveEventLogging = 126,
+ActiveEventFishing = 127,
+ActiveEventFarm = 128,
+ActiveEventDelivery = 129,
+ActiveEventEnemyBoss = 130,
+ActiveEventPickBoss = 131,
+ActiveEventLoggingBoss = 132,
+ActiveEventFishingBoss = 133,
+ActiveEventFarmBoss = 134,
+Dungeon = 135,
+MultiTriip = 136,
+SecretRoom1 = 137,
+ShrineClear = 138,
+FirstAccess = 139,
+Trader = 140,
+Workbench = 141,
+Restaurant = 142,
+WeponShop = 143,
+ArmourShop = 144,
+CloudArea1 = 145,
+CloudArea2 = 146,
+CloudArea3 = 147,
+CloudArea4 = 148,
+CloudArea5 = 149,
+CloudArea6 = 150,
+CloudArea7 = 151,
+CloudArea8 = 152,
+CloudArea9 = 153,
+CloudArea10 = 154,
+CloudArea11 = 155,
+CloudArea12 = 156,
+CloudArea13 = 157,
+CloudArea14 = 158,
+CloudArea15 = 159,
+Upland = 160,
+LoggingBossPorposePoint = 161,
+FishingBossPorposePoint = 162,
+MinerBossPorposePoint = 163,
+FarmBossPorposePoint = 164,
+FrajeelMuseum = 165,
+QuestAcceptedPorposeCurrentLife = 166,
+QuestAcceptedPorpose = 167,
+QuestAcceptedNotPorpose = 168,
+QuestAchievedCurrentLifeNotPorpose = 169,
+QuestAchievedPorpose_Common = 170,
+BonfireVastMap = 171,
+BulletinBoard = 172,
+ReforgedStoneExchange = 173,
+Gallery = 174,
+TowerGrayOut = 175,
+RepopTimerEnemy = 176,
+RepopTimerLogging = 177,
+RepopTimerFishing = 178,
+RepopTimerMiner = 179,
+RepopTimerFarm = 180,
+MiraDungeon = 181,
+LuxuriousShop = 182,
+QuestAchievedPorposeCurrentLife = 183,
+QuestAchievedPorpose = 184,
+DungeonPlaceEntered = 185,
+DungeonToLowerLevel = 186,
+DungeonToUpperLevel = 187,
+TowerRankup = 188,
+TowerGrayOutRankup = 189,
+BulletinBoardRankup = 190,
+DarkDon = 191,
+ArchOpen = 192,
+ArchClosed = 193,
+AlchemyMachineStone = 194,
+AlchemyMachineStoneFever = 195,
+AlchemyMachineWood = 196,
+AlchemyMachineWoodFever = 197,
+AlchemyMachineMonster = 198,
+AlchemyMachineMonsterFever = 199,
+AlchemyMachineCook = 200,
+AlchemyMachineCookFever = 201,
+AlchemyMachineOld = 202,
+AlchemyMachineOldFever = 203,
+RoguelikeStartPoint = 204,
+RoguelikeAreaTrendBattle = 205,
+RoguelikeAreaTrendLogging = 206,
+RoguelikeAreaTrendMining = 207,
+RoguelikeAreaTrendFishing = 208,
+RoguelikeAreaTrendHarvesting = 209,
+RoguelikeAreaTrendSpecial = 210,
+RoguelikeAreaTrendRangeBattle = 211,
+RoguelikeAreaTrendRangeLogging = 212,
+RoguelikeAreaTrendRangeMining = 213,
+RoguelikeAreaTrendRangeFishing = 214,
+RoguelikeAreaTrendRangeHarvesting = 215,
+RoguelikeAreaTrendRangeSpecial = 216,
+RoguelikeWarpPointOpen = 217,
+RoguelikeWarpPointClosed = 218,
+ActiveEventOther = 219,
+DarkDonStatue = 220,
+RoguelikeActiveEventNormal = 221,
+SleepMimic = 222,
+RoguelikeAreaTargetEnemy = 223,
+RoguelikeAreaTargetSilverCrownBoss = 224,
+RoguelikeAreaTargetGoldCrownBoss = 225,
+RoguelikeAreaTargetLogging = 226,
+RoguelikeAreaTargetLoggingBoss = 227,
+RoguelikeAreaTargetFishing = 228,
+RoguelikeAreaTargetFishingBoss = 229,
+RoguelikeAreaTargetMiner = 230,
+RoguelikeAreaTargetMinerBoss = 231,
+RoguelikeAreaTargetFarm = 232,
+RoguelikeAreaTargetFarmBoss = 233,
+AlchemyMachineUndiscovered = 234,
+RepopTimerAlchemyMachineStone = 235,
+RepopTimerAlchemyMachineStoneFever = 236,
+RepopTimerAlchemyMachineWood = 237,
+RepopTimerAlchemyMachineWoodFever = 238,
+RepopTimerAlchemyMachineMonster = 239,
+RepopTimerAlchemyMachineMonsterFever = 240,
+RepopTimerAlchemyMachineCook = 241,
+RepopTimerAlchemyMachineCookFever = 242,
+RepopTimerAlchemyMachineOld = 243,
+RepopTimerAlchemyMachineOldFever = 244,
+DarkDonBed = 245,
+Footprints = 246,
+Resident = 247,
+ResidentQuest = 248,
+HouseWithResident = 249,
+QuestDestinationRoguelike = 250,
+QuestDestinationSleepMimic = 251,
+StrongBoss = 252,
+Num = 253,
+EMapIconType_MAX = 254,
+};
+enum EEquipSortFilterKeyType : u8 {
+NONE = 0,
+STICK = 1,
+SWORD = 2,
+BLADE = 3,
+BOW = 4,
+STAFF = 5,
+SHIELD = 6,
+PICKEL = 7,
+AXE = 8,
+ROD = 9,
+HOE = 10,
+PAN = 11,
+HAMMER = 12,
+SAW = 13,
+NEEDLE = 14,
+FLASK = 15,
+PEN = 16,
+HEAD = 17,
+TOPS = 18,
+BOTTOMS = 19,
+ARM = 20,
+FOOT = 21,
+MANTLE = 22,
+GLASSES = 23,
+ACCESSORY = 24,
+NUM = 25,
+EEquipSortFilterKeyType_MAX = 26,
+};
+enum ERecipeCategory : u8 {
+None = 0,
+Story = 1,
+Weapon = 2,
+Tool = 3,
+Shield = 4,
+Armor = 5,
+Drug = 6,
+Cooking = 7,
+Object = 8,
+Material = 9,
+Favorite = 10,
+ERecipeCategory_MAX = 11,
+};
+enum ELifeCategory : u8 {
+None = 0,
+Battle = 1,
+Gatherer = 2,
+Crafter = 3,
+ELifeCategory_MAX = 4,
+};
+enum EQuestPhase : u8 {
+PhaseNone = 0,
+PhaseOpen = 1,
+PhaseAccept = 2,
+Phase3 = 3,
+Phase4 = 4,
+Phase5 = 5,
+Phase6 = 6,
+Phase7 = 7,
+Phase8 = 8,
+Phase9 = 9,
+Phase10 = 10,
+Phase11 = 11,
+Phase12 = 12,
+Phase13 = 13,
+Phase14 = 14,
+Phase15 = 15,
+Phase16 = 16,
+Phase17 = 17,
+Phase18 = 18,
+Phase19 = 19,
+Phase20 = 20,
+Phase21 = 21,
+Phase22 = 22,
+Phase23 = 23,
+Phase24 = 24,
+Phase25 = 25,
+Phase26 = 26,
+Phase27 = 27,
+Phase28 = 28,
+Phase29 = 29,
+Phase30 = 30,
+Phase31 = 31,
+Phase32 = 32,
+Phase33 = 33,
+Phase34 = 34,
+Phase35 = 35,
+Phase36 = 36,
+Phase37 = 37,
+Phase38 = 38,
+Phase39 = 39,
+Phase40 = 40,
+Phase41 = 41,
+Phase42 = 42,
+Phase43 = 43,
+Phase44 = 44,
+Phase45 = 45,
+Phase46 = 46,
+Phase47 = 47,
+Phase48 = 48,
+Phase49 = 49,
+Phase50 = 50,
+Phase51 = 51,
+Phase52 = 52,
+Phase53 = 53,
+Phase54 = 54,
+Phase55 = 55,
+Phase56 = 56,
+Phase57 = 57,
+Phase58 = 58,
+Phase59 = 59,
+Phase60 = 60,
+Phase61 = 61,
+Phase62 = 62,
+Phase63 = 63,
+Phase64 = 64,
+Phase65 = 65,
+Phase66 = 66,
+Phase67 = 67,
+Phase68 = 68,
+Phase69 = 69,
+Phase70 = 70,
+Phase71 = 71,
+Phase72 = 72,
+Phase73 = 73,
+Phase74 = 74,
+Phase75 = 75,
+Phase76 = 76,
+Phase77 = 77,
+Phase78 = 78,
+Phase79 = 79,
+Phase80 = 80,
+Phase81 = 81,
+Phase82 = 82,
+Phase83 = 83,
+Phase84 = 84,
+Phase85 = 85,
+Phase86 = 86,
+Phase87 = 87,
+Phase88 = 88,
+Phase89 = 89,
+Phase90 = 90,
+Phase91 = 91,
+Phase92 = 92,
+Phase93 = 93,
+Phase94 = 94,
+Phase95 = 95,
+Phase96 = 96,
+Phase97 = 97,
+Phase98 = 98,
+Phase99 = 99,
+Phase100 = 100,
+Phase101 = 101,
+Phase102 = 102,
+Phase103 = 103,
+Phase104 = 104,
+Phase105 = 105,
+Phase106 = 106,
+Phase107 = 107,
+Phase108 = 108,
+Phase109 = 109,
+Phase110 = 110,
+Phase111 = 111,
+Phase112 = 112,
+Phase113 = 113,
+Phase114 = 114,
+Phase115 = 115,
+Phase116 = 116,
+Phase117 = 117,
+Phase118 = 118,
+Phase119 = 119,
+Phase120 = 120,
+Phase121 = 121,
+Phase122 = 122,
+Phase123 = 123,
+Phase124 = 124,
+Phase125 = 125,
+Phase126 = 126,
+Phase127 = 127,
+Phase128 = 128,
+Phase129 = 129,
+Phase130 = 130,
+Phase131 = 131,
+Phase132 = 132,
+Phase133 = 133,
+Phase134 = 134,
+Phase135 = 135,
+Phase136 = 136,
+Phase137 = 137,
+Phase138 = 138,
+Phase139 = 139,
+Phase140 = 140,
+Phase141 = 141,
+Phase142 = 142,
+Phase143 = 143,
+Phase144 = 144,
+Phase145 = 145,
+Phase146 = 146,
+Phase147 = 147,
+Phase148 = 148,
+Phase149 = 149,
+Phase150 = 150,
+Phase151 = 151,
+Phase152 = 152,
+Phase153 = 153,
+Phase154 = 154,
+Phase155 = 155,
+Phase156 = 156,
+Phase157 = 157,
+Phase158 = 158,
+Phase159 = 159,
+Phase160 = 160,
+Phase161 = 161,
+Phase162 = 162,
+Phase163 = 163,
+Phase164 = 164,
+Phase165 = 165,
+Phase166 = 166,
+Phase167 = 167,
+Phase168 = 168,
+Phase169 = 169,
+Phase170 = 170,
+Phase171 = 171,
+Phase172 = 172,
+Phase173 = 173,
+Phase174 = 174,
+Phase175 = 175,
+Phase176 = 176,
+Phase177 = 177,
+Phase178 = 178,
+Phase179 = 179,
+Phase180 = 180,
+Phase181 = 181,
+Phase182 = 182,
+Phase183 = 183,
+Phase184 = 184,
+Phase185 = 185,
+Phase186 = 186,
+Phase187 = 187,
+Phase188 = 188,
+Phase189 = 189,
+Phase190 = 190,
+Phase191 = 191,
+Phase192 = 192,
+Phase193 = 193,
+Phase194 = 194,
+Phase195 = 195,
+Phase196 = 196,
+Phase197 = 197,
+Phase198 = 198,
+Phase199 = 199,
+Phase200 = 200,
+Phase201 = 201,
+Phase202 = 202,
+Phase203 = 203,
+Phase204 = 204,
+Phase205 = 205,
+Phase206 = 206,
+Phase207 = 207,
+Phase208 = 208,
+Phase209 = 209,
+Phase210 = 210,
+Phase211 = 211,
+Phase212 = 212,
+Phase213 = 213,
+Phase214 = 214,
+Phase215 = 215,
+Phase216 = 216,
+Phase217 = 217,
+Phase218 = 218,
+Phase219 = 219,
+Phase220 = 220,
+Phase221 = 221,
+Phase222 = 222,
+Phase223 = 223,
+Phase224 = 224,
+Phase225 = 225,
+Phase226 = 226,
+Phase227 = 227,
+Phase228 = 228,
+Phase229 = 229,
+Phase230 = 230,
+Phase231 = 231,
+Phase232 = 232,
+Phase233 = 233,
+Phase234 = 234,
+Phase235 = 235,
+Phase236 = 236,
+Phase237 = 237,
+Phase238 = 238,
+Phase239 = 239,
+Phase240 = 240,
+Phase241 = 241,
+Phase242 = 242,
+Phase243 = 243,
+Phase244 = 244,
+Phase245 = 245,
+Phase246 = 246,
+Phase247 = 247,
+Phase248 = 248,
+Phase249 = 249,
+Phase250 = 250,
+Phase251 = 251,
+Phase252 = 252,
+Phase253 = 253,
+PhaseAchieve = 254,
+PhaseEnd = 255,
+EQuestPhase_MAX = 256,
+};
+enum ENaviType : u8 {
+None = 0,
+NaviPhase = 1,
+NaviQuest = 2,
+ENaviType_MAX = 3,
+};
+enum EGameTimePeriodType : u8 {
+GAME_TIME_TYPE_MORNING = 0,
+GAME_TIME_TYPE_NIGHT = 1,
+Num = 2,
+EGameTimePeriodType_MAX = 3,
+};
+enum EPartyCharaType : s32 {
+PARTY_CHARA_TYPE_HUMAN = 0,
+PARTY_CHARA_TYPE_GUEST = 1,
+PARTY_CHARA_TYPE_MAX = 2,
+};
+enum ECraftObjStatusBitFlag : u8 {
+None = 0,
+Shave = 1,
+Put = 2,
+IsPlannedConstruct = 4,
+ECraftObjStatusBitFlag_MAX = 5,
+};
+enum EPlantDungeonGrowthState : u8 {
+None = 0,
+Sapling = 1,
+Mature = 2,
+Cleared = 3,
+EPlantDungeonGrowthState_MAX = 4,
+};
+enum EPlantDungeonRoomConnectBitFlag : u8 {
+NoConnect = 0,
+Up = 1,
+Right = 2,
+UR = 3,
+Down = 4,
+UD = 5,
+DR = 6,
+UDR = 7,
+Left = 8,
+UL = 9,
+LR = 10,
+ULR = 11,
+DL = 12,
+UDL = 13,
+DLR = 14,
+All = 15,
+EPlantDungeonRoomConnectBitFlag_MAX = 16,
+};
+enum EPlantDungeonRoomType : u8 {
+None = 0,
+Normal = 1,
+Lucky = 2,
+SuperLucky = 3,
+Boss = 4,
+Entrance = 5,
+Exit = 6,
+Stairs = 7,
+Landing = 8,
+Boss_Stairs = 9,
+Boss_Landing = 10,
+RIPENING_ALTAR = 11,
+TAMAGEMONO = 12,
+CHARACTER_GATE = 13,
+TREASURY = 14,
+MONSTER_HOUSE = 15,
+EPlantDungeonRoomType_MAX = 16,
+};
+enum EPlantDungeonRoomPlacementType : u8 {
+None = 0,
+Enemy = 1,
+Tree = 2,
+Vegetable = 3,
+Ore = 4,
+Fish = 5,
+Treasure = 6,
+EPlantDungeonRoomPlacementType_MAX = 7,
+};
+enum EPlantDungeonFloorType : u8 {
+NONE = 0,
+MONSTER = 1,
+MINING = 2,
+LOGGING = 3,
+FISHING = 4,
+HARVESTING = 5,
+RIPENING_ALTAR = 6,
+TAMAGEMONO = 7,
+CHARACTER_GATE = 8,
+TREASURY = 9,
+MONSTER_HOUSE = 10,
+START = 11,
+BOSS = 12,
+EPlantDungeonFloorType_MAX = 13,
+};
+enum ENpcTargetType : u8 {
+None = 0,
+CraftObj = 1,
+Npc = 2,
+GalleryObj = 3,
+FuncPoint = 4,
+MapEventFuncPoint = 5,
+Num = 6,
+ENpcTargetType_MAX = 7,
+};
+enum EGalleryNpcState : u8 {
+None = 0,
+WalkState = 2,
+Watch = 4,
+WillBuy = 8,
+Bought = 16,
+StandState = 28,
+EGalleryNpcState_MAX = 29,
+};
+enum EItemTitleType : u8 {
+None = 0,
+Rag = 1,
+Normal = 2,
+Masterpiece = 3,
+Supreme = 4,
+Legend = 5,
+EItemTitleType_MAX = 6,
+};
+enum EItemQualityType : u8 {
+Quality_0 = 0,
+Quality_1 = 1,
+Quality_2 = 2,
+Quality_3 = 3,
+Quality_MAX = 4,
+};
+enum EQuestReportType : u8 {
+None = 0,
+Subjugation = 1,
+SubjugationWithLife = 2,
+SubjugationWithBtlCmd = 3,
+AttackWithBtlCmd = 4,
+UseBtlCmd = 5,
+HaveItem = 6,
+PassItem = 7,
+PassItemWithQuality = 8,
+MiningItem = 9,
+MiningItemWithTarget = 10,
+MiningItemWithTargetExcellent = 11,
+MiningWithTargetExcellent = 12,
+FellingItem = 13,
+FellingItemWithTree = 14,
+FellingWithTree = 15,
+FellingWithTreeExcellent = 16,
+FishingItem = 17,
+FishingItemWithExcellent = 18,
+FishingWithMap = 19,
+FishingWithExcellent = 20,
+PlowingItem = 21,
+PlowingItemWithMap = 22,
+PlowingItemWithExcellent = 23,
+PlowingWithMap = 24,
+PlowingWithSprinkle = 25,
+PlowingWithMulti = 26,
+ItemCraft = 27,
+ItemCraftItemWithQuality = 28,
+ItemCraftWithQuality = 29,
+ItemCraftWithMaterial = 30,
+ItemCraftWithMaterialQuality = 31,
+ItemCraftWithGreatAndOver = 32,
+ItemCraftWithExcellentAccumulation = 33,
+Money = 34,
+PlantDungeonClearWithBattle = 35,
+PlantDungeonClearWithPick = 36,
+NpcMembers = 37,
+LifeMaster = 38,
+CraftObject = 39,
+CraftObjectBridge = 40,
+CraftObjectSlope = 41,
+CraftObjectFlooring = 42,
+CraftObjectWallpaper = 43,
+SubjugationWithCompanion = 44,
+MiningWithTargetCompanion = 45,
+FellingWithTargetCompanion = 46,
+FishingItemWithCompanion = 47,
+PlowingItemWithCompanion = 48,
+ItemCraftItemWithCompanion = 49,
+ItemCraftInspiration = 50,
+ItemCraftAddExtra = 51,
+ItemCraftRework = 52,
+CraftObjectField = 53,
+CraftObjectMyHouse = 54,
+GetItemTama = 55,
+Raiseup = 57,
+RequestIslands = 61,
+RequestPerson = 62,
+PlowingWithFieldSprinkle = 64,
+MiningWithTargetExcellentCount = 65,
+FellingWithTreeExcellentCount = 66,
+CraftObjectFurniture = 67,
+CraftObjectHouse = 68,
+RemoveObstacle = 69,
+FriendshipMax = 70,
+PriceShoppingWithMap = 71,
+PriceGallery = 72,
+SkillCount = 73,
+FellowCount = 74,
+TamagemonoCount = 75,
+SecretTarget = 76,
+SweetChestnut = 77,
+DungeonsTreeAge = 78,
+PickMiner = 100,
+PickLumberjack = 101,
+PickFisherman = 102,
+PickFarmer = 103,
+GetPickItem = 104,
+ItemCraftWithSeries = 107,
+EQuestReportType_MAX = 108,
+};
+enum ELicenseRank : u8 {
+None = 0,
+Apprentice = 1,
+Novice = 2,
+Pretty = 3,
+Able = 4,
+Expert = 5,
+Master = 6,
+Hero = 7,
+ELicenseRank_MAX = 8,
+};
+enum ECraftAreaCategory : s32 {
+INVALID = -1,
+MAP = 0,
+OUTDOOR = 1,
+INDOOR = 2,
+WALL = 3,
+CEILING = 4,
+FLOOR = 5,
+MAX = 6,
+};
+enum EGoddessHerbType : u8 {
+Blue = 0,
+Gold = 1,
+EGoddessHerbType_MAX = 2,
+};
+enum ECropStatusFlags : u32 {
+None = 0,
+Watering = 1,
+Rained = 2,
+ECropStatusFlags_MAX = 3,
+};
+enum EShopStockType : u8 {
+None = 0,
+Count = 1,
+CountDaily = 2,
+CountRespawn = 3,
+EShopStockType_MAX = 4,
+};
+enum EEquipStatusType : u8 {
+None = 0,
+Hp = 1,
+Sp = 2,
+PhysicalOffense = 3,
+PhysicalDefense = 4,
+MagicOffense = 5,
+MagicDefense = 6,
+Crafter = 7,
+Gatherer = 8,
+EEquipStatusType_MAX = 9,
+};
+enum EFarmStandSlotState : u8 {
+None = 0,
+Sale = 1,
+Complete = 2,
+EFarmStandSlotState_MAX = 3,
+};
+
+struct HeaderData_P {
+u32 MAGIC_NUMBER;
+u32 MajorVersion;
+u32 MinorVersion;
+Str Version;
+DateTime realTime;
+};
+
+struct FlagStatus_P {
+u32 MAGIC_NUMBER;
+Array<u8> GlobalBitFlag; // bool in Array is u8 not u32
+Array<u8> GlobalByteFlag;
+Array<u8> GlobalSyncBitFlag; // bool in Array is u8 not u32
+Array<u8> GlobalSyncByteFlag;
+Array<u8> GlobalItemGetFlag; // bool in Array is u8 not u32
+Array<u8> GlobalItemNewFlag; // bool in Array is u8 not u32
+Array<u8> GlobalRepopTBoxFlag; // bool in Array is u8 not u32
+Array<u8> GlobalHelpOpenFlag; // bool in Array is u8 not u32
+Array<u8> GlobalHelpNewFlag; // bool in Array is u8 not u32
+// move Array<u8> GlobalFlightSelectedFlag; // bool in Array is u8 not u32
+Array<u8> skillPanelBitFlag; // bool in Array is u8 not u32
+Array<u8> skillPanelUnlockBitFlag; // bool in Array is u8 not u32
+Array<u8> GlobalAchievementNewFlag; // bool in Array is u8 not u32
+Array<u8> GlobalAchievementReceiveFlag; // bool in Array is u8 not u32
+Array<u8> GlobalLibraryNewFlag; // bool in Array is u8 not u32
+Array<u8> GlobalLibraryFlag; // bool in Array is u8 not u32
+Array<u8> GlobalVisitMapFlag; // bool in Array is u8 not u32
+u32 GlobalHonegonFlightUsedFlag;
+Array<u8> GlobalFlightSelectedFlag; // bool in Array is u8 not u32
+Array<u8> GlobalNPCJoinSelectedFlag; // bool in Array is u8 not u32
+Array<u8> GlobalTipsOpenFlag; // bool in Array is u8 not u32
+Array<u8> GlobalTipsNewFlag; // bool in Array is u8 not u32
+Array<u8> GlobalSignNewFlag; // bool in Array is u8 not u32
+Array<u8> GlobalChallengeNewFlag; // bool in Array is u8 not u32
+};
+
+struct GDDGuildStatusP {
+u32 MAGIC_NUMBER;
+Array<u32> LvList;
+Array<u32> ExpList;
+};
+
+struct ReportUserInfoP {
+u32 MAGIC_NUMBER;
+Array<Str> ReportUsers;
+u32 LatestRecordIndex;
+};
+
+struct PLAY_DATA_COUNT {
+u32 obstacleReleaseNum;
+u32 getTamagemonoNum;
+u32 tamagemonoReleaseNum;
+u32 trustValMaxNum;
+u32 questClearNum;
+u32 growUpPlantDungeonNum;
+u32 joinChallengeTourNum;
+s32 developmentRank;
+u32 pickShellNum;
+u32 pickBugNum;
+u32 pickEggNum;
+u32 pickGrassAndflowerNum;
+u32 pickMushroomNum;
+u32 pickFruitsNum;
+u32 defeatEnemyNum;
+u32 defeatBossNum;
+Map<u8, u32> defeatEnemyNumByTypeID;
+Map<u8, u32> defeatEnemyNumWithWeapon;
+u32 defeatBossWithMultiPlayNum;
+u32 pickTreeNum;
+u32 pickOreNum;
+u32 pickFishNum;
+u32 pickVegetableNum;
+u32 pickBossTreeNum;
+u32 pickBossOreNum;
+u32 pickBossFishNum;
+u32 pickBossVegetableNum;
+u32 pickBossTreeWithMultiPlayNum;
+u32 pickBossOreWithMultiPlayNum;
+u32 pickBossFishWithMultiPlayNum;
+u32 pickBossVegetableWithMultiPlayNum;
+u32 harvestingGameNormalClearNum;
+u32 sowingSeedsOrWateringNum;
+u32 requestBlacksmithNPCNum;
+u32 requestNeedleworkerNPCNum;
+u32 requestCarpenterNPCNum;
+u32 requestCookNPCNum;
+u32 requestAlchemistNPCNum;
+u32 requestArtistNPCNum;
+u32 itemCraftUseAddItemNum;
+u32 galleryRevenueNum;
+Array<u32> islandPurchaseNums;
+u32 instantCharaJoinNum;
+};
+
+struct PurposePointPinSaveData {
+Map<EMapIconType, Vector2D> dataMap;
+};
+
+struct ItemCraftAssistCharaSetting {
+Array<u32> unk1;
+Array<u32> unk2;
+};
+
+struct DungeonMapJumpFunctionPointData {
+Name unk1;
+Name unk2;
+};
+
+struct InventoryHandle : Handle {
+};
+
+struct QuestSaveInfo {
+Map<Name, u32> tmpFlagList;
+EQuestPhase phase;
+u32 isNew;
+};
+
+struct QuestNavi {
+Name questId;
+ENaviType Type;
+};
+
+struct ActiveEventInfo {
+s8 timePeriodChangeCount;
+};
+
+struct PeriodicBenefitSaveInfo {
+s32 PlatformType;
+Array<u8> contextData;
+};
+
+struct PHASE_INFO {
+u16 chapter_no;
+u16 sub_phase_no;
+};
+
+struct GAME_ENV_INFO {
+float gameTime;
+float overwriteGameTime;
+u8 overwriteWeatherType;
+EGameTimePeriodType gameTimePeriodType;
+};
+
+struct FollowerCharaInfoP {
+Name m_followerId;
+};
+
+struct PlantDungeonRipeningAlterP {
+u16 Age;
+InventoryHandle Target;
+Map<Name, u16> Materials;
+u32 isClear;
+};
+
+struct AvatarStatusBodyParam {
+Name BodyModelId;
+Name BodyId;
+Name HairModelId;
+Name HeadModelId;
+Name FaceColorId;
+Name HairColorId;
+Name EyeColorId;
+Name EyeBrowPartsId;
+u8 EyeBrowPositionXIndex;
+u8 EyeBrowPositionYIndex;
+u8 EyeBrowScaleIndex;
+Name EyePartsId;
+u8 EyePositionXIndex;
+u8 EyePositionYIndex;
+u8 EyeScaleIndex;
+Name NosePartsId;
+Name MouthPartsId;
+u8 MouthPositionIndex;
+u8 MouthScaleIndex;
+Name EarPartsId;
+Name OptionPartsId;
+Name VoiceId;
+};
+
+struct WeatherInfo {
+u8 weatherType;
+};
+
+struct CraftAreaPresentInfo {
+u8 numItem;
+u8 numEmote;
+u8 numRecipe;
+};
+
+struct CraftAreaInteractionInfo {
+u8 pointTotalTalk;
+u8 pointTotalQuest;
+u8 pointTotalPresent;
+u8 pointTotalInhabit;
+};
+
+struct RecipeSaveInfo {
+u32 bitFlag;
+};
+
+struct LotTamagemonoInfoP {
+s32 dropCount;
+s32 getCount;
+s32 lotCount;
+};
+
+struct MultiplayUserInfo {
+u32 MAGIC_NUMBER;
+Str Name;
+Str productUserId;
+u8 PlatformType;
+// move Str platformUserName;
+u64 platformId;
+u32 adventureId;
+// move u32 plantDungeonGen;
+// move u32 roguelikeBossId;
+// move u16 Level;
+u8 lifeType;
+u16 Level;
+u8 gameTime;
+// move u8 PlatformType;
+u16 year;
+u8 month;
+u8 day;
+u8 hour;
+u8 minute;
+Str platformUserName;
+u32 roguelikeBossId;
+u32 plantDungeonGen;
+};
+
+struct MultiPlantDungeonTamagemonoSessionInfo {
+Str ownerProductUserId;
+u64 sessionIdCrc;
+u8 reglowCount;
+};
+
+struct HugeMapAreaStatusP {
+u8 nowAreaRank;
+u8 releaseAreaRank;
+u32 AreaPoint;
+// remove u32 isHintOpenShrine;
+};
+
+struct InstantCharaStatus {
+Name charaID;
+Name charaParamId;
+Vector4 Pos;
+u8 overrideAnimType;
+Name overrideAnimId;
+u32 isDisablePlayCharaWaitMotion;
+u32 isJoined;
+};
+
+struct GDDTextLogInfo {
+Str Text;
+Str charaName;
+Name charaID;
+};
+
+struct EnemyStatus {
+u32 m_placementGroupId;
+u32 m_paramId;
+};
+
+struct GenerateRandomPlacement {
+Name m_generateId;
+};
+
+struct BlockInfo {
+u32 MAGIC_NUMBER;
+Str Name;
+Str productUserId;
+u8 PlatformType;
+// move Str platformUserName;
+u64 platformId;
+u32 adventureId;
+// move u16 Level;
+u8 lifeType;
+u16 Level;
+u8 gameTime;
+// move u8 PlatformType;
+u16 year;
+u8 month;
+u8 day;
+u8 hour;
+u8 minute;
+Str platformUserName;
+};
+
+struct StrongBossInfo {
+float bestTime;
+u32 isClear;
+u32 isNew;
+};
+
+struct Object {
+};
+
+struct PurposePointPinSaveDataInfo {
+Vector2D Pos;
+Name AreaID;
+Name questId;
+u8 areaNo;
+};
+
+struct SortSettingInfo {
+u16 unk;
+};
+
+struct InventoryInfoCore {
+u32 MAGIC_NUMBER;
+InventoryHandle Handle;
+Name ItemId;
+u32 getOrder;
+u32 IsFavorite;
+u32 isPresented;
+Name aocId;
+Name expiredItemId;
+};
+
+struct AvatarStatusHandle : Handle {
+};
+
+struct LifeStatus {
+ELicenseRank licenseRank;
+u32 star;
+s32 skillMaxPoint;
+};
+
+struct EquipInvInfo {
+InventoryHandle weapon;
+InventoryHandle shield;
+InventoryHandle Head;
+InventoryHandle tops;
+InventoryHandle bottoms;
+InventoryHandle arm;
+InventoryHandle foot;
+InventoryHandle mantle;
+InventoryHandle glasses;
+InventoryHandle Accessory;
+};
+
+struct ViewEquipInvInfo {
+InventoryHandle weapon;
+InventoryHandle shield;
+InventoryHandle Head;
+InventoryHandle tops;
+InventoryHandle bottoms;
+InventoryHandle arm;
+InventoryHandle foot;
+InventoryHandle mantle;
+InventoryHandle glasses;
+};
+
+struct ViewEquipModelInfo {
+Name weapon;
+Name shield;
+Name Head;
+Name tops;
+Name bottoms;
+Name arm;
+Name foot;
+Name mantle;
+Name glasses;
+Name sub;
+ViewEquipInvInfo invInfo;
+};
+
+struct BtlActParam {
+Name CommandID;
+};
+
+struct NpcViewEquipInvInfo {
+InventoryHandle weapon;
+InventoryHandle shield;
+};
+
+struct CharaStatusHandle : Handle {
+};
+
+struct CraftExParamHandle : Handle {
+};
+
+struct Vector {
+double X;
+double Y;
+double Z;
+};
+
+struct Rotator {
+double Pitch;
+double Yaw;
+double Roll;
+};
+
+struct GDId {
+// remove u32 crc;
+Name Name;
+};
+
+struct PlantDungeonStatusHandle : Handle {
+};
+
+struct PlantDungeonBossSpawnInfo {
+GDId bossDataId;
+u32 bossLevel;
+};
+
+struct PlantDungeonFloorStatusHandle : Handle {
+};
+
+struct PlantDungeonBranchStatusHandle : Handle {
+};
+
+struct PlantDungeonRoomStatusHandle : Handle {
+};
+
+struct PlantDungeonBranchFloorStatusHandle : Handle {
+};
+
+struct PlantDungeonSpawnInfo {
+GDId placementId;
+u32 indexFromTableTop;
+u32 spawnableLevel;
+};
+
+struct GalleryObjStatusHandle : Handle {
+};
+
+struct PickPointRepop {
+float m_repopTimer;
+};
+
+struct CraftAreaInhabitantHandle : Handle {
+};
+
+struct CraftAreaInhabitantQuestInfo {
+Name questId;
+u32 questTalk;
+};
+
+struct CraftHandle : Handle {
+};
+
+struct CraftAreaFriendNpcHandle : Handle {
+};
+
+struct GalleryInhabitantHandle : Handle {
+};
+
+struct LotTBoxDataP {
+Name placeId;
+u8 tboxType;
+u32 isGet;
+};
+
+struct GoddessHerbInfoP {
+Name ID;
+u16 idx;
+EGoddessHerbType Type;
+u32 isGet;
+u32 isSetup;
+Vector4 Point;
+};
+
+struct VegetableFieldStatusHandle : Handle {
+};
+
+struct MySetAbilityEquipInfo {
+Str Name;
+EquipInvInfo equip;
+};
+
+struct MySetViewEquipInfo {
+Str Name;
+ViewEquipInvInfo equip;
+};
+
+struct DailyMissionInfoStatusHandle : Handle {
+};
+
+struct GDDShopItemData {
+EShopStockType stockType;
+s16 buyNum;
+};
+
+struct AddStatus {
+EEquipStatusType Type;
+s32 Value;
+};
+
+struct RandomQuestItemInfo {
+Name ItemId;
+u8 Quality;
+s32 Num;
+};
+
+struct CharaEquipInvInfo {
+InventoryHandle Vehicle;
+};
+
+struct CraftObjExParamBase {
+CraftExParamHandle Handle;
+};
+
+struct CraftAreaStatusHandle : Handle {
+};
+
+struct PickPointStatusHandle : Handle {
+};
+
+struct StandPlaceInfo {
+IntVector offsetIdx;
+};
+
+struct IndoorPartsHandle : Handle {
+};
+
+struct GDDTraderShopStatusItemData {
+EShopStockType stockType;
+s16 stockNum;
+};
+
+struct GDDFarmStandPickupInfo {
+u32 isPickup;
+u8 series;
+float Ratio;
+};
+
+struct GenerateRepop {
+u8 m_repopNum;
+};
+
+struct GDDFarmStandSlotItemInfo {
+Name ItemId;
+u8 Count;
+};
+
+struct QuestStatusP {
+u32 MAGIC_NUMBER;
+Map<Name, QuestSaveInfo> story;
+Map<Name, QuestSaveInfo> life;
+Map<Name, QuestSaveInfo> Request;
+Map<Name, QuestSaveInfo> Dynamic;
+Map<Name, QuestSaveInfo> Active;
+QuestNavi navi;
+Map<Name, ActiveEventInfo> ActiveEventInfo;
+};
+
+struct PeriodicBenefitStatusP {
+u32 MAGIC_NUMBER;
+Map<Name, PeriodicBenefitSaveInfo> benefitSaveMap;
+};
+
+struct PHASE_INFO_P {
+u32 MAGIC_NUMBER;
+PHASE_INFO currentPhase;
+PHASE_INFO nextPhase;
+GAME_ENV_INFO envInfo;
+};
+
+struct WeatherStatusP {
+u32 MAGIC_NUMBER;
+Array<WeatherInfo> WeatherInfo;
+};
+
+struct RecipeStatusP {
+u32 MAGIC_NUMBER;
+Map<Name, RecipeSaveInfo> recipeInfoMap;
+};
+
+struct MultiPlayStatusP {
+u32 MAGIC_NUMBER;
+Array<u64> kickedSessionIdList;
+u64 SessionId;
+// move u32 localSessionHostNum;
+Str sessionHostUserId; // technically Array<u8>
+u32 checkBeforeSession;
+u8 kickedSessionIdListIndex;
+u32 checkInterruptedPresent;
+u8 interruptedExchangePresentNum;
+Array<MultiplayUserInfo> joinUserInfoHistory;
+u8 joinUserInfoHistoryIndex;
+u32 MAGIC_NUMBER_2;
+// remove u8 joinUserInfoHistoryNum;
+MultiPlantDungeonTamagemonoSessionInfo gotTamagemonoBoxSessionInfo;
+u32 localSessionHostNum;
+Str epicAccountProductUserID;
+Str onlinePlayProductUserID;
+};
+
+struct HugeMapStatusP {
+u32 MAGIC_NUMBER;
+Map<Name, HugeMapAreaStatusP> areaStatus;
+Set<Name> discoveryCampList;
+Set<Name> discoveryShrineList;
+Map<Name, u32> isEverEnterShrineList;
+};
+
+struct InstantCharaStatusP {
+u32 MAGIC_NUMBER;
+Map<Name, InstantCharaStatus> InstantCharaStatus;
+s64 Time;
+};
+
+struct GDDTextLogP {
+u32 MAGIC_NUMBER;
+u8 lang;
+u16 Start;
+u16 Num;
+Array<GDDTextLogInfo> textList;
+u32 unk;
+};
+
+struct EnemyStatusP {
+u32 MAGIC_NUMBER;
+Array<EnemyStatus> m_enemyStatus;
+};
+
+struct BlockUserInfoP {
+u32 MAGIC_NUMBER;
+Array<BlockInfo> m_blockUserList;
+};
+
+struct GDDRoguelikeStrongBossStatusP {
+u32 MAGIC_NUMBER;
+Name lastSelectedBossId;
+Map<Name, StrongBossInfo> strongBossInfoList;
+};
+
+struct SaveGame {
+};
+
+struct PurposePointPinAreaSaveData {
+Map<EMapIconType, PurposePointPinSaveDataInfo> dataMap;
+};
+
+struct ItemSortSaveData {
+Map<u32, SortSettingInfo> inventorySortSettingInfoMap;
+Map<EEquipSortFilterKeyType, SortSettingInfo> baseEquipSortSettingInfoMap;
+Map<ERecipeCategory, SortSettingInfo> recipeSortSettingInfoMap;
+Map<u32, SortSettingInfo> ripeningAltarSortSettingInfoMap;
+Map<u32, SortSettingInfo> craftMenuSortSettingInfoMap;
+Map<ELifeCategory, SortSettingInfo> partyMenuSortSettingInfoMap;
+SortSettingInfo residentCharacterListSortInfo;
+Map<ELifeCategory, SortSettingInfo> residentSortSettingInfoMap;
+Map<u32, SortSettingInfo> alchemyPotSortSettingInfoMap;
+};
+
+struct InventoryInfoPlantDungeonBranch : InventoryInfoCore {
+u32 unk;
+};
+
+struct PartyCharaInfoP {
+CharaStatusHandle m_charaStHdl;
+EPartyCharaType m_partyType;
+u8 m_partyIdx;
+u32 m_isLeader;
+};
+
+struct SupporterCharaInfoP {
+CharaStatusHandle m_charaStatusHandle;
+};
+
+struct InstantCharaInfoP {
+CharaStatusHandle m_charaStatusHandle;
+u32 m_isEnableUpdateTimer;
+float m_deltaTime;
+};
+
+struct PlantDungeonStatusCoreP {
+PlantDungeonStatusHandle Handle;
+GDId placedMapId;
+GDId baseFloorMapId;
+PlantDungeonBossSpawnInfo bossSpawnInfo;
+EPlantDungeonGrowthState growthState;
+s32 restChallengNumber;
+Array<PlantDungeonFloorStatusHandle> floorStHdlArray;
+PlantDungeonBranchStatusHandle branchStatusHandle;
+};
+
+struct PlantDungeonFloorStatusCoreP {
+PlantDungeonFloorStatusHandle Handle;
+Name mapId;
+s32 Number;
+GDId roomTableGroupId;
+Array<PlantDungeonRoomStatusHandle> roomStHdlArray;
+PlantDungeonBranchFloorStatusHandle branchFloorStatusHandle;
+GDId clearCondiitonId;
+};
+
+struct PlantDungeonRoomStatusCoreP {
+PlantDungeonRoomStatusHandle Handle;
+GDId roomId;
+s32 Number;
+IntVector idxVec;
+Rotator rot;
+EPlantDungeonRoomConnectBitFlag connectFlag;
+EPlantDungeonRoomType roomType;
+EPlantDungeonRoomPlacementType placementType;
+Array<PlantDungeonSpawnInfo> spawnInfo;
+};
+
+struct PlantDungeonBranchFloorStatusCoreP {
+s32 numberFromTop;
+s32 numberFromLeft;
+s32 vintage;
+EPlantDungeonFloorType floorType;
+u32 cleared;
+Array<PlantDungeonBranchFloorStatusHandle> branchParent;
+Array<PlantDungeonBranchFloorStatusHandle> branchChildren;
+PlantDungeonBranchFloorStatusHandle Handle;
+s32 RandomSeed;
+};
+
+struct PlantDungeonBranchStatusCoreP {
+Array<PlantDungeonBranchFloorStatusHandle> floorHandle;
+PlantDungeonBranchFloorStatusHandle rootFloorHandle;
+EPlantDungeonFloorType trendType;
+s32 branchVintage;
+// move PlantDungeonBossSpawnInfo bossSpawnInfo;
+PlantDungeonBranchStatusHandle Handle;
+PlantDungeonBossSpawnInfo bossSpawnInfo;
+};
+
+struct GalleryObjStatusP {
+GalleryObjStatusHandle Handle;
+GDId placeLocationId;
+GDId craftItemId;
+Vector placeLocation;
+Rotator placeRotation;
+u32 sellCraftRich;
+};
+
+struct AvatarStatusP {
+AvatarStatusHandle Handle;
+AvatarStatusBodyParam BodyParam;
+};
+
+struct MapPickPointRepop {
+Map<Name, PickPointRepop> m_groupList;
+};
+
+struct CraftAreaInhabitantInfo {
+CraftAreaInhabitantHandle CraftAreaInhabitantHandle;
+CharaStatusHandle CharaStatusHandle;
+CraftAreaInhabitantQuestInfo questInfo;
+u32 isLivingStartDay;
+};
+
+struct CraftObjStatusHandle : CraftHandle {
+};
+
+struct CraftAreaFriendNpcInfo {
+CraftAreaFriendNpcHandle CraftAreaFriendNpcHandle;
+CharaStatusHandle CharaStatusHandle;
+CraftAreaInhabitantHandle CraftAreaInhabitantHandle;
+u32 isPresentItem;
+u32 isPresentEmote;
+u32 isPresentRecipe;
+Name mapId;
+Name prevMapId;
+Name placeMoveMapId;
+u8 npcMapAttr;
+u8 prevNpcMapAttr;
+u32 isComeOutFlag;
+u32 isMoveMap;
+u32 isSwitchMove;
+u32 isSwitchEscape;
+u32 isActivitySetting;
+u32 isFirstCommand;
+ENpcTargetType commandTargetType;
+u32 commandTargetHandle;
+Vector commandTargetLocation;
+Name CommandID;
+CharaStatusHandle charaStatusHandleExchange;
+Vector charaLocation;
+Rotator charaRotation;
+s32 aiPhase;
+s32 aiGroup;
+s32 aiGroupSub;
+};
+
+struct GalleryInhabitantInfo {
+GalleryInhabitantHandle GalleryInhabitantHandle;
+CharaStatusHandle CharaStatusHandle;
+GalleryObjStatusHandle objStatusHandle;
+EGalleryNpcState npcState;
+u32 galleryPointIdCrc;
+u8 galleryPointIndex;
+};
+
+struct MapLotTBoxInfoP {
+Array<LotTBoxDataP> tboxList;
+};
+
+struct LotGoddessHerbInfoP {
+u16 Num;
+u32 isSetup;
+Array<GoddessHerbInfoP> list;
+Array<GoddessHerbInfoP> latestLotteryResult;
+u16 dailyBluePickNumInMultiGuest;
+u16 dailyGoldPickNumInMultiGuest;
+};
+
+struct MySetAbilityEquipList {
+Array<MySetAbilityEquipInfo> equipList;
+};
+
+struct MySetViewEquipList {
+Array<MySetViewEquipInfo> equipList;
+};
+
+struct DailyMissionInfoStatusP {
+DailyMissionInfoStatusHandle Handle;
+Name missionId;
+u8 currentProgress;
+u8 prevProgress;
+u32 isBonus;
+u32 isNew;
+};
+
+struct GDDShopData {
+Map<Name, GDDShopItemData> itemMap;
+};
+
+struct InventoryInfoStackable : InventoryInfoCore {
+u16 stockNum;
+};
+
+struct InventoryInfoEquip : InventoryInfoCore {
+EItemTitleType itemTitle;
+EItemQualityType Quality;
+Array<AddStatus> addEquipStatus; // make array
+Array<Name> grantSkillId;
+u16 equipped; // new field
+u16 equipAbilityNum;
+u16 equipViewNum;
+u8 licenseItemCraftLv;
+u8 isBurying;
+u16 ripeningAge;
+u16 creatorSignNo;
+u8 ExEquipItemType;
+};
+
+struct RandomQuestReportInfo {
+EQuestReportType reportType;
+RandomQuestItemInfo Item;
+};
+
+struct RandomQuestRewardInfo {
+s32 Money;
+RandomQuestItemInfo Item;
+};
+
+struct CharaStatusP {
+CharaStatusHandle m_charaStHdl;
+Name m_paramId;
+u32 m_nowHp;
+u32 m_nowSp;
+u32 m_nowTension;
+float m_nowReactGauge;
+float m_nowReactContinueTime;
+float m_nowRecoverySPTime;
+u16 m_addOrder;
+u32 rateMaxHp;
+u32 rateNowHp;
+u32 rateMaxSp;
+u32 rateNowSp;
+};
+
+struct CraftObjExParamLand : CraftObjExParamBase {
+Name tileId;
+u32 isRoundView;
+};
+
+struct CraftObjExParamHouse : CraftObjExParamBase {
+Array<CraftAreaStatusHandle> indoorAreaStHdlArray;
+Name placedMapId;
+Name entranceMapId;
+Name refAreaId;
+GDId houseDataId;
+u8 houseCategory;
+u32 isPlannedConstruct;
+};
+
+struct CraftObjExParamPickPoint : CraftObjExParamBase {
+PickPointStatusHandle pickPointHandle;
+};
+
+struct CraftObjExParamStand : CraftObjExParamBase {
+Map<CraftObjStatusHandle, StandPlaceInfo> standPlaceInfoMap;
+};
+
+struct CraftObjExParamPlantDungeon : CraftObjExParamBase {
+PlantDungeonStatusHandle plantDungeonStHdl;
+};
+
+struct CraftObjExParamVegetableField : CraftObjExParamBase {
+VegetableFieldStatusHandle fieldStatusHandle;
+};
+
+struct CraftObjExParamPlannedConstruct : CraftObjExParamBase {
+s32 secondTimeToComplete;
+float remainingSecondTimeToComplete;
+CraftObjStatusHandle refPlannedConstructObjStHdl;
+u32 isCompleted;
+u32 IsMove;
+};
+
+struct CraftAreaStatusCoreP {
+CraftAreaStatusHandle Handle;
+Array<CraftObjStatusHandle> craftObjStHdlArray;
+Array<CraftObjStatusHandle> putCraftObjStHdlArray;
+ECraftAreaCategory Category;
+Name mapId;
+Name AreaID;
+Vector Location;
+s32 Width;
+s32 Depth;
+s32 Height;
+s32 voxelWidth;
+s32 voxelDepth;
+s32 voxelHeight;
+s32 noCreateRange;
+u32 isFix;
+};
+
+struct ChildIndoorPartsInfo {
+IndoorPartsHandle indoorPartsHdl;
+CraftAreaStatusHandle areaStHdl;
+GDId designId;
+GDId ItemId;
+};
+
+struct PickPointInfoBase {
+PickPointStatusHandle Handle;
+Name pickPointId;
+Name pickPointGroupId;
+Name pickPointDataId;
+Name pickPointParamId;
+u16 Level;
+u8 statusId;
+u32 isValidPlacement;
+u32 mapId;
+u8 respawnCount;
+};
+
+struct CropData {
+PickPointStatusHandle PickPointStatusHandle;
+ECropStatusFlags StatusFlags;
+u32 growthId;
+DateTime dataTime;
+u8 lv;
+};
+
+struct GDDTraderShopStatusData {
+s64 Time;
+Name shopId;
+Map<Name, GDDTraderShopStatusItemData> itemMap;
+};
+
+struct GenerateGroupRepop {
+float m_repopTimer;
+Map<Name, GenerateRepop> m_generateList;
+};
+
+struct GDDFarmStandSlotInfo {
+EFarmStandSlotState Status;
+Array<GDDFarmStandSlotItemInfo> itemList;
+Array<GDDFarmStandSlotItemInfo> itemListReward;
+};
+
+struct PLAY_DATA_P {
+u32 MAGIC_NUMBER;
+u64 crossSaveVersion;
+u32 isUseCrossSave;
+Vector4 playerPosition;
+float cameraAzimuth;
+Name mapId;
+Name subMapId;
+Name mjFuncPointId;
+s32 Money;
+u32 exe;
+s64 saveDateTime;
+s64 startDateTime;
+s64 lastResetRealTime;
+// remove u8 clockValidCheckStruct;
+u32 userDeviceId;
+Name safeMapId;
+Vector4 safePlayerPosition;
+s32 goddessHerbBlue;
+s32 goddessHerbGold;
+s32 sweetChestnut;
+s32 interactionPoint;
+u32 playTime;
+Str islandName;
+Array<Name> emorteIds;
+Array<Name> stampIds;
+Array<Str> freeFormChatList;
+u8 ArenaRank;
+PLAY_DATA_COUNT playCountData;
+Map<Name, PurposePointPinSaveData> purposePointPinData;
+// move Map<Name, PurposePointPinAreaSaveData> purposePointPinDataInfo;
+Vector4 prevPlayerPositionInHugeMap;
+Vector4 playerPositionPrevHugeMapJump;
+Name prevHugeMapJumpMapId;
+Name prevHugeMapJumpSubMapId;
+// move u8 prevHugeMapJumpAreaNo;
+Name prevInHugeMapJumpMapId;
+Name prevInHugeMapJumpSubMapId;
+u8 prevHugeMapJumpAreaNo;
+u8 prevInHugeMapJumpAreaNo;
+u32 plantdungeonMaxReachGen;
+Array<Name> mainMenuSwapIDs;
+Map<Name, u32> preAddContentRight;
+Map<Name, PurposePointPinAreaSaveData> purposePointPinDataInfo;
+u32 carriedOverFromTrialSaveData;
+Str carriedPlayerName;
+u32 itemCraftSignNo;
+Map<Name, ItemCraftAssistCharaSetting> ItemCraftAssistCharaSetting;
+DungeonMapJumpFunctionPointData dungeonMjFpData;
+ItemSortSaveData itemSortInfo;
+};
+
+struct PartyGroupInfoP {
+u32 MAGIC_NUMBER;
+Array<PartyCharaInfoP> m_partyCharaInfoList;
+FollowerCharaInfoP m_followerCharaInfo;
+SupporterCharaInfoP m_supporterCharaInfo;
+InstantCharaInfoP m_instantCharaInfo;
+};
+
+struct PlantDungeonStatusP {
+u32 MAGIC_NUMBER;
+Array<PlantDungeonStatusCoreP> plantDungeonStatusCorePList;
+Array<PlantDungeonFloorStatusCoreP> plantDungeonFloorStatusCorePList;
+Array<PlantDungeonRoomStatusCoreP> plantDungeonRoomStatusCorePList;
+PlantDungeonRipeningAlterP PlantDungeonRipeningAlterP;
+};
+
+struct PlantDungeonBranchStatusP {
+u32 MAGIC_NUMBER;
+// move Array<PlantDungeonBranchFloorStatusCoreP> plantDungeonBranchFloorStatusCorePList;
+Array<PlantDungeonBranchStatusCoreP> plantDungeonBranchStatusCorePList;
+Array<PlantDungeonBranchFloorStatusCoreP> plantDungeonBranchFloorStatusCorePList;
+};
+
+struct GalleryStatusInfoP {
+u32 MAGIC_NUMBER;
+Array<GalleryObjStatusP> galleryObjStatusPList;
+u32 galleryArtPoint;
+};
+
+struct GDDAvatarStatusP {
+u32 MAGIC_NUMBER;
+Array<AvatarStatusP> playerP; // make array
+AvatarStatusBodyParam trialData;
+};
+
+struct GDDNpcStatusP {
+u32 MAGIC_NUMBER;
+u32 isRelottery;
+Array<CraftAreaInhabitantInfo> CraftAreaInhabitantInfo;
+Array<CraftObjStatusHandle> inhabitantHouseCraftObjStatusHandle;
+u16 inhabitantKey;
+Array<CraftAreaFriendNpcInfo> CraftAreaFriendNpcInfo;
+u16 craftAreaFriendNpcKey;
+u8 dailyQuestTotal;
+CraftAreaPresentInfo dailyPresentInfo;
+CraftAreaInteractionInfo dailyInteractionInfo;
+Array<GalleryInhabitantInfo> GalleryInhabitantInfo;
+u16 galleryInhabitantKey;
+u32 isGalleryActivityLotteryDone;
+};
+
+struct LotPlaceInfoP {
+u32 MAGIC_NUMBER;
+LotTamagemonoInfoP tamagemonoInfo;
+Map<Name, MapLotTBoxInfoP> mapTBoxInfo;
+LotGoddessHerbInfoP goddessHerbInfo;
+};
+
+struct GDDMySetStatusP {
+u32 MAGIC_NUMBER;
+Map<Name, MySetAbilityEquipList> abilityEquipList;
+Map<Name, MySetViewEquipList> viewEquipList;
+};
+
+struct DailyMissionStatusP {
+u32 MAGIC_NUMBER;
+Array<DailyMissionInfoStatusP> missionInfoList;
+};
+
+struct GDDShopStatusP {
+u32 MAGIC_NUMBER;
+Map<Name, GDDShopData> shopMap;
+};
+
+struct GDDRoguelikeStatusP {
+u32 MAGIC_NUMBER;
+Name bossId;
+u32 totalPoint;
+u32 highScore;
+Array<u8> rewardedClearRank;
+ERoguelikeStartAreaType startAreaType;
+Map<Name, GDDShopData> shopMap;
+Array<u8> GlobalShopPreviewFlag;
+};
+
+struct InventoryInfoConsume : InventoryInfoStackable {
+};
+
+struct InventoryInfoWeapon : InventoryInfoEquip {
+};
+
+struct InventoryInfoLifeTools : InventoryInfoEquip {
+};
+
+struct InventoryInfoShield : InventoryInfoEquip {
+};
+
+struct InventoryInfoArmor : InventoryInfoEquip {
+};
+
+struct InventoryInfoCraft : InventoryInfoStackable {
+};
+
+struct InventoryInfoKit : InventoryInfoCore {
+Name kitTargetId;
+CraftObjStatusHandle refCraftObjStHdl;
+s32 price;
+};
+
+struct InventoryInfoMaterial : InventoryInfoStackable {
+};
+
+struct InventoryInfoRecipe : InventoryInfoStackable {
+};
+
+struct InventoryInfoImportant : InventoryInfoStackable {
+};
+
+struct InventoryInfoVehicle : InventoryInfoEquip {
+};
+
+struct InventoryInfoPowerUp : InventoryInfoStackable {
+};
+
+struct RandomQuestConfig {
+Name questId;
+Name BaseID;
+u8 Level;
+Name requesterId;
+RandomQuestReportInfo ReportInfo;
+RandomQuestRewardInfo RewardInfo;
+};
+
+struct GuestCharaStatusP : CharaStatusP {
+u16 m_friendship;
+u8 m_talkCount;
+u32 m_enablePresent;
+u32 m_enablePresentFriendshipMax;
+};
+
+struct CraftObjStatusP {
+CraftObjStatusHandle Handle;
+CraftExParamHandle exParamHandle;
+Name craftObjId;
+Name viewPatternId;
+Vector Location;
+Rotator Rotation;
+s32 gridIdx;
+u32 mapId;
+ECraftObjStatusBitFlag objStatusBitFlag;
+};
+
+struct CraftExParamP {
+Array<CraftObjExParamLand> exParamLand;
+Array<CraftObjExParamHouse> exParamHouse;
+Array<CraftObjExParamPickPoint> exParamPickPoint;
+Array<CraftObjExParamStand> exParamStand;
+Array<CraftObjExParamPlantDungeon> exParamPlantDungeon;
+Array<CraftObjExParamVegetableField> exParamVegetableField;
+Array<CraftObjExParamPlannedConstruct> exParamPlannedConstruct;
+};
+
+struct MapCraftAreaStatusP : CraftAreaStatusCoreP {
+};
+
+struct OutdoorCraftAreaStatusP : CraftAreaStatusCoreP {
+};
+
+struct IndoorCraftAreaStatusP : CraftAreaStatusCoreP {
+Array<ChildIndoorPartsInfo> childIndoorPartrsInfoArray;
+Name outdoorMapId;
+s32 roomIdx;
+GDId roomId;
+GDId defaultIndoorDesignId;
+};
+
+struct WallCraftAreaStatusP : CraftAreaStatusCoreP {
+Rotator Rotation;
+};
+
+struct CeilingCraftAreaStatusP : CraftAreaStatusCoreP {
+};
+
+struct PickPointInfoTreeP : PickPointInfoBase {
+};
+
+struct PickPointInfoFishP : PickPointInfoBase {
+};
+
+struct PickPointInfoDepositP : PickPointInfoBase {
+};
+
+struct PickPointInfoVegetableP : PickPointInfoBase {
+};
+
+struct VegetableFieldInfo {
+Array<CropData> cropDataList;
+VegetableFieldStatusHandle Handle;
+u32 crcMapId;
+u32 crcVegetableFieldDataId;
+u32 ownerId;
+u32 isCraftObject;
+u8 absorptionNum;
+};
+
+struct GDDTraderShopStatusMapData {
+Map<Name, GDDTraderShopStatusData> shopMap;
+};
+
+struct MapGenerateGroupRepop {
+Map<Name, GenerateGroupRepop> m_groupList;
+};
+
+struct HumanCharaStatusP : CharaStatusP {
+CharaEquipInvInfo m_charaEquipInvInfo;
+};
+
+struct GDDFarmStandInfo {
+Name ID;
+GDDFarmStandPickupInfo pickupInfo;
+Array<GDDFarmStandSlotInfo> slotList;
+Array<Name> npcList;
+};
+
+struct InventoryStatusDataP {
+Array<InventoryInfoConsume> invConsume;
+Array<InventoryInfoWeapon> invWeapon;
+Array<InventoryInfoLifeTools> invLifeTools;
+Array<InventoryInfoShield> invShield;
+Array<InventoryInfoArmor> invArmor;
+Array<InventoryInfoCraft> invCraft;
+Array<InventoryInfoKit> invKit;
+Array<InventoryInfoMaterial> invMaterial;
+Array<InventoryInfoRecipe> invRecipe;
+Array<InventoryInfoImportant> invImportant;
+Array<InventoryInfoVehicle> invMount;
+// move Array<InventoryInfoPlantDungeonBranch> invPlantDungeonBranch;
+// move Array<InventoryInfoPowerUp> invPowerUp;
+Array<InventoryHandle> invItemSlot;
+Array<InventoryInfoPlantDungeonBranch> invPlantDungeonBranch;
+u32 getOrderCount;
+Array<InventoryInfoWeapon> invSupportCharaWeapon;
+Array<InventoryInfoLifeTools> invSupportCharaLifeTools;
+Array<InventoryInfoShield> invSupportCharaShield;
+Array<InventoryInfoArmor> invSupportCharaArmor;
+Array<InventoryInfoVehicle> invSupportCharaMount;
+Array<InventoryInfoWeapon> invInstantCharaWeapon;
+Array<InventoryInfoLifeTools> invInstantCharaLifeTools;
+Array<InventoryInfoShield> invInstantCharaShield;
+Array<InventoryInfoArmor> invInstantCharaArmor;
+Array<InventoryInfoVehicle> invInstantCharaMount;
+Array<InventoryInfoPowerUp> invPowerUp;
+};
+
+struct DynamicQuestConfigP {
+u32 MAGIC_NUMBER;
+Array<RandomQuestConfig> dataListRandom;
+};
+
+struct CraftStatusInfoP {
+u32 MAGIC_NUMBER;
+Array<CraftObjStatusP> craftObjStatusPArray;
+CraftExParamP CraftExParamP;
+};
+
+struct CraftAreaStatusP {
+u32 MAGIC_NUMBER;
+Array<MapCraftAreaStatusP> mapCraftAreaStatusPList;
+Array<OutdoorCraftAreaStatusP> outdoorCraftAreaStatusPList;
+Array<IndoorCraftAreaStatusP> indoorCraftAreaStatusPList;
+Array<WallCraftAreaStatusP> wallCraftAreaStatusPList;
+Array<CeilingCraftAreaStatusP> ceilingCraftAreaStatusPList;
+};
+
+struct PickPointStatusP {
+u32 MAGIC_NUMBER;
+Array<PickPointInfoTreeP> pickPointStatusTree;
+Array<PickPointInfoTreeP> pickPointStatusCraftTree;
+Array<PickPointInfoTreeP> pickPointStatusHugeMapTree;
+Array<PickPointInfoFishP> pickPointStatusFish;
+Array<PickPointInfoFishP> pickPointStatusCraftFish;
+Array<PickPointInfoFishP> pickPointStatusHugeMapFish;
+Array<PickPointInfoDepositP> pickPointStatusDeposit;
+Array<PickPointInfoDepositP> pickPointStatusCraftDeposit;
+Array<PickPointInfoDepositP> pickPointStatusHugeMapDeposit;
+Array<PickPointInfoVegetableP> pickPointStatusVegetable;
+Array<PickPointInfoVegetableP> pickPointStatusCraftVegetable;
+Array<PickPointInfoVegetableP> pickPointStatusHugeMapVegetable;
+Map<Name, MapPickPointRepop> m_mapRepopList;
+};
+
+struct VegetableFieldStatusP {
+u32 MAGIC_NUMBER;
+Array<VegetableFieldInfo> infoList;
+};
+
+struct GDDTraderShopStatusP {
+u32 MAGIC_NUMBER;
+Map<Name, GDDTraderShopStatusMapData> Map;
+};
+
+struct GenerateStatusP {
+u32 MAGIC_NUMBER;
+Map<Name, GenerateRandomPlacement> m_randomPlacementList;
+Map<Name, MapGenerateGroupRepop> m_mapRepopList;
+};
+
+struct AvatarCharaStatusP : HumanCharaStatusP {
+AvatarStatusHandle m_avatarStatusHdl;
+Str m_name;
+Name m_lifeId;
+Array<Name> m_lifeSet;
+Map<Name, LifeStatus> m_lifeStatus;
+Map<Name, u16> m_lv;
+Map<Name, u32> m_exp;
+Map<Name, EquipInvInfo> m_abilityEquipInvInfo;
+Map<Name, ViewEquipInvInfo> m_viewEquipInvInfo;
+ViewEquipModelInfo m_iconEquipModelInfo;
+Array<BtlActParam> m_editableBtlActParam;
+};
+
+struct NpcCharaStatusP : HumanCharaStatusP {
+LifeStatus m_lifeStatus;
+u16 m_lv;
+u16 m_friendship;
+u32 m_exp;
+EquipInvInfo m_abilityEquipInvInfo;
+NpcViewEquipInvInfo m_npcViewEquipInvInfo;
+u8 m_questCount;
+u8 m_talkCount;
+u32 m_enablePresent;
+u32 m_enablePresentFriendshipMax;
+u8 m_friendshipDailyMove;
+u8 m_friendshipDailyBattle;
+u8 m_friendshipDailyPick;
+u8 m_friendshipDailyPickVegetable;
+u8 m_friendshipDailyCraft;
+u8 m_charaReleaseCount;
+u32 m_isInstantChara;
+u8 m_charaModelIndex;
+};
+
+struct SupportCharaStatusP : NpcCharaStatusP {
+};
+
+struct GDDFarmStandMapData {
+Map<Name, GDDFarmStandInfo> standMap;
+};
+
+struct CharaStatusGroupP {
+u32 MAGIC_NUMBER;
+Array<AvatarCharaStatusP> m_stAvatarP;
+Array<NpcCharaStatusP> m_stFriendP;
+Array<GuestCharaStatusP> m_stGuestP;
+Array<SupportCharaStatusP> m_stSupportP;
+};
+
+struct GDDFarmStandStatusP {
+u32 MAGIC_NUMBER;
+s64 Time;
+Map<Name, GDDFarmStandMapData> Map;
+};
+
+struct SaveData : SaveGame {
+HeaderData_P m_HeaderData;
+PLAY_DATA_P m_PlayData;
+FlagStatus_P m_FlagStatus;
+InventoryStatusDataP m_InventoryStatus;
+QuestStatusP m_QuestStatus;
+DynamicQuestConfigP m_DynamicQuestConfig;
+PeriodicBenefitStatusP m_PeriodicBenefitStatus;
+PHASE_INFO_P m_PhaseInfo;
+CharaStatusGroupP m_CharaStatus;
+PartyGroupInfoP m_PartyStatus;
+CraftStatusInfoP m_CraftStatus;
+CraftAreaStatusP m_CraftAreaStatus;
+PlantDungeonStatusP m_PlantDungeonStatus;
+PlantDungeonBranchStatusP m_PlantDungeonBranchStatus;
+GalleryStatusInfoP m_GalleryStatus;
+GDDAvatarStatusP m_AvatarStatus;
+PickPointStatusP m_PickPointStatus;
+WeatherStatusP m_WeatherStatus;
+GDDNpcStatusP m_NpcStatus;
+RecipeStatusP m_RecipeStatus;
+LotPlaceInfoP m_LotPlaceStatus;
+VegetableFieldStatusP m_VegetableFieldStatus;
+GDDMySetStatusP m_MySetStatus;
+GDDGuildStatusP m_GuildStatus;
+MultiPlayStatusP m_MultiPlayStatusP;
+DailyMissionStatusP m_DailyMissionStatusP;
+GDDShopStatusP m_ShopStatusP;
+GDDTraderShopStatusP m_TraderShopStatusP;
+GDDFarmStandStatusP m_FarmStandStatusP;
+HugeMapStatusP m_HugeMapStatusP;
+// remove InstantCharaStatusP m_InstantCharaStatusP;
+GDDTextLogP m_TextLogP;
+EnemyStatusP m_EnemyStatusP;
+GenerateStatusP m_GenerateStatusP;
+BlockUserInfoP m_BlockUserInfoP;
+ReportUserInfoP m_ReportUserInfoP;
+GDDRoguelikeStatusP m_RoguelikeStatusP;
+GDDRoguelikeStrongBossStatusP m_RoguelikeStrongBossStatusP;
+};
+
+struct GUID {
+u128 guid;
+};
+struct Header {
+u32 magic;
+u32 save_game_version;
+u32 package_version_ue4;
+u32 package_version_ue5;
+u16 engine_major;
+u16 engine_minor;
+u16 engine_patch;
+u32 engine_build;
+Str engine_version;
+u32 customVersionFormat;
+Map<GUID, u32> hashableIndexMap;
+Str saveDataClassName;
+};
+struct SaveFile {
+Header header;
+SaveData saveData;
+};
+
+#pragma array_limit 2000000
+#pragma pattern_limit 4000000
+
+SaveFile saveFile @ 0x0;
