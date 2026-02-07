@@ -1,7 +1,9 @@
 # fli_save_editor.py
 ImGui based GUI to parse save json based on a pattern file.
 Includes fli_bin2sav and fli_sav2json to enable loading/saving of any bin, sav, json files
-#### usage info:
+#### usage info:  
+Save files are usually located:  
+`Steam/userdata/<your steam ID>/2993780/remote/002DAE74-00-gamedata.bin`  
 Save Data (Useful) contains some of the more useful data, and formats inventory into tables including "Delete" and "Duplicate" options  
 Save Data (Full) contains all save data   
 Type information is taken from the pattern file and usually listed next to each field. e.g. if the type is s32 ensure that you only input a signed 32-bit number.
@@ -36,3 +38,5 @@ Uses a pattern file to parse save data and convert into JSON
 This is actually an ImHex-compatible pattern file
 
 ## Tools
+Creates a fli save pattern from a usmap.  
+see tools/readme.md for full info
