@@ -208,6 +208,15 @@ def handle_inputs(param, param_type, param_val, do_indent = True, display_name =
 ##        changed, param_val = imgui.input_int("##"+param, param_val, 0)
 ##    elif param_type in ["u32", "u64", "s64"]:
     if param_type in ["u8", "s8", "u16", "s16", "u32", "s32", "u64", "s64"]:
+        clamp_val = {
+            "u8":(0,255),
+            "s8":(-128,127),
+            "u16":(0,65535),
+            "s16":(-32768,32767),
+            "u32":(0,4294967295),
+            "s32":(-2147483648,2147483647),
+            "u64":(0,18446744073709551615),
+            "s64":(-9223372036854775808,9223372036854775807)}
         if display_name:
             imgui_text_nonempty(param.split("##")[0])
         if flag_list_loaded and "GlobalBitFlag" in param.split("##")[0]: # [idx] GlobalBitFlag
@@ -225,7 +234,11 @@ def handle_inputs(param, param_type, param_val, do_indent = True, display_name =
 ##        imgui.text(param)
         changed, str_val = imgui.input_text("##"+param, str_val, imgui.InputTextFlags_.chars_decimal)
         if changed:
-            param_val = int(str_val)
+            param_val = int(str_val) if (str_val != "" and not str_val.endswith("-") and not str_val.endswith(".") and not str_val.lower().endswith("e")) else 0
+            if param_val < clamp_val[param_type][0]:
+                param_val = clamp_val[param_type][0]
+            elif param_val > clamp_val[param_type][1]:
+                param_val = clamp_val[param_type][1]
     elif param_type == "float":
         if display_name:
             imgui_text_nonempty(param.split("##")[0])
