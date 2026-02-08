@@ -6,7 +6,7 @@ import fli_bin2sav
 import fli_sav2json
 import copy
 
-VERSION = 0.1
+VERSION = "0.1.1"
 
 INDENT_LEVEL = 8
 
@@ -468,7 +468,6 @@ def try_get_new_handle(handle_list):
             return new_handle
     return False
 
-
 def gui():
     global loaded_save
     global structs
@@ -549,7 +548,7 @@ def gui():
 \t- Not counting errors when there's a game update before the pattern file gets updated. Those will just waste both our time.
 Also feel free to suggest
 
-FANTASY LIFE i Save Editor:
+FANTASY LIFE i Save Editor""" + f" ver {VERSION}"+""":
 \tPattern file is used to convert a .sav to .json, as well as for displaying save data in this GUI
 \t\t(The pattern file is actually an ImHex pattern file, if you want to read saves in a hex editor)
 \tThe Item, Skill, and Flag lists are used to display nice names for specific entries
@@ -597,6 +596,7 @@ The .exe versions were packaged using python 3.10.5, using pyinstaller
 \tpycryptodome
 
 Changelog:
+\t0.1.1 - Clamp int (u8, etc) to min/max, other int input validation
 \t0.1 - Alpha release""")
             imgui.pop_text_wrap_pos()
 
@@ -1009,14 +1009,12 @@ patternfile={pattern_file_location}""")
             imgui.text_colored(tmp_col, f"{tmp_txt}")
             imgui.end_tab_item()
         imgui.end_tab_bar()
-    
 
 immapp.run(
     gui_function=gui,  # The Gui function to run
-    window_title="FANTASY LIFE i Save Editor" + f" ver {VERSION}",  # the window title
+    window_title="FANTASY LIFE i Save Editor",  # the window title
 ##    window_size_auto=True,  # Auto size the application window given its widgets
     window_size=(1706,960),
     # Uncomment the next line to restore window position and size from previous run
     window_restore_previous_geometry=True
-    
 )
