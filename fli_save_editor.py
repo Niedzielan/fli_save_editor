@@ -6,7 +6,7 @@ import fli_bin2sav
 import fli_sav2json
 import copy
 
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 
 INDENT_LEVEL = 8
 
@@ -31,6 +31,25 @@ byteflag_list = {}
 search_text_item = ""
 search_text_skill = ""
 search_inventory = ""
+
+log_txt = []
+builtin_print = __builtins__.print
+def print(*args, **kwargs):
+    """Overrides print to add print text to log."""
+    global log_txt
+    try:
+        if len(args) == 1:
+            log_txt.append(args[0])
+    except:
+        pass
+    return builtin_print(*args, **kwargs)
+__builtins__.print = print
+
+recipe_include_story = False
+recipe_include_not_in_itemlist = False
+recipe_include_important = False
+add_item_id = ""
+found_recipes = []
 
 config_loaded = False
 item_list_loaded = False
@@ -192,6 +211,11 @@ def imgui_text_nonempty(text):
     else:
         imgui.text(text)
         return True
+
+def imgui_wraptext(text):
+    imgui.push_text_wrap_pos(imgui.get_content_region_avail()[0])
+    imgui.text(text)
+    imgui.pop_text_wrap_pos()
 
 def get_enum_by_val(enum_entries, val):
     for enum in enum_entries["entries"]:
@@ -460,13 +484,76 @@ def handle_struct(param_name, struct_name, param_val):
 def try_get_new_handle(handle_list):
     ## Handle seems to be: 0xAAAABCCC
     ## Where AAAA is 4 * (index+1), B is handle_type, CCC is index
-    print("try get new handle")
+##    print("try get new handle")
     for handle_idx in range(len(handle_list)-1, -1, -1):
         handle = handle_list[handle_idx]
-        new_handle = handle + (4<<16) + 1
+        new_handle = handle + (4<<16) + 1 # should work even if the handle type is > 15, aka using a bit in the next column
         if new_handle not in handle_list:
             return new_handle
     return False
+
+def add_item(inventory_name, new_itemid = None, quantity = 1):
+    inventory = loaded_save["saveData"]["m_InventoryStatus"][inventory_name]
+
+    tmp_handle_list = []
+    last_empty_idx = -1
+    last_item_idx = -1
+    for item_idx in range(len(inventory)):
+        item = inventory[item_idx]
+        if item["ItemId"] in ["", "None", None]:
+            if last_empty_idx < 0:
+                last_empty_idx = item_idx
+            continue
+        else:
+            last_empty_idx = -1
+            last_item_idx = item_idx
+            tmp_handle_list.append(item["Handle"]["handle"])
+    if last_item_idx < 0:
+        print(f"No first item found, make sure inventory {inventory_name} has at least 1 item")
+        return False        
+    to_copy = inventory[last_item_idx]
+
+    new_item = copy.deepcopy(to_copy)
+    if new_itemid and new_itemid not in [None, "None", ""]:
+        new_item["ItemId"] = new_itemid
+    new_handle = try_get_new_handle(tmp_handle_list)
+    if new_handle:
+        new_item["Handle"]["handle"] = new_handle
+    loaded_save["saveData"]["m_InventoryStatus"]["getOrderCount"] += 1
+    new_item["getOrder"] = loaded_save["saveData"]["m_InventoryStatus"]["getOrderCount"]
+    if quantity and "stockNum" in new_item:
+        new_item["stockNum"] = quantity
+    inventory[last_empty_idx] = new_item
+    return True
+
+def add_recipe_by_recipestatus(recipeStatus):
+##    global recipe_include_story
+##    global recipe_include_not_in_itemlist
+##    global recipe_include_important
+
+    recipeStatus_name = recipeStatus["key"]
+    recipeStatus_value = recipeStatus["value"]["bitFlag"]
+    if ("_story" in recipeStatus_name and not recipe_include_story) or ("iky" in recipeStatus_name and not recipe_include_important) or recipeStatus_value != 0:
+        return False
+    recipeStatus_item = "_".join(recipeStatus_name.split("_")[1:])
+
+    if "irp_"+recipeStatus_item not in item_list: 
+        if "irp_recipe_"+recipeStatus_item not in item_list:
+            if recipe_include_not_in_itemlist:
+                item_recipeName = "irp_"+recipeStatus_item
+                print(f"couldn't find {recipeStatus_item} in item list, assuming default naming scheme {item_recipeName}")
+            else:
+                print(f"couldn't find {recipeStatus_item} in item list, skipping")
+                return False
+        else:
+            item_recipeName = "irp_recipe_"+recipeStatus_item
+    else:
+        item_recipeName = "irp_"+recipeStatus_item
+
+    print(f"Adding item {item_recipeName}")
+    add_item("invRecipe", item_recipeName)
+    recipeStatus["value"]["bitFlag"] = 1
+    return True
 
 def gui():
     global loaded_save
@@ -596,6 +683,7 @@ The .exe versions were packaged using python 3.10.5, using pyinstaller
 \tpycryptodome
 
 Changelog:
+\t0.1.2 - Add recipes, an "add all recipes" button, and log tab
 \t0.1.1 - Clamp int (u8, etc) to min/max, other int input validation
 \t0.1 - Alpha release""")
             imgui.pop_text_wrap_pos()
@@ -635,6 +723,7 @@ Changelog:
                                  "invShield": "Shields",
                                  "invArmor": "Armor",
                                  "invMaterial": "Materials",
+                                 "invRecipe": "Recipes",
                                  "invImportant": "Valuables",
                                  "invMount": "Mounts"}
                 if imgui.begin_tab_bar("inventorytabs"):
@@ -832,7 +921,53 @@ Changelog:
                         imgui.table_next_column()
                         changed, area["value"]["AreaPoint"] = handle_inputs(f"##AreaPoint{area_idx}", gstruct["AreaPoint"], area["value"]["AreaPoint"])
                     imgui.end_table()
+            if imgui.collapsing_header("Extra - useful operations"):
+                imgui_wraptext("To manually add a recipe, add the irp_ItemId item to invRecipe and set the bitFlag in m_RecipeStatus for recipe_ItemId to 1")
+                global recipe_include_story
+                global recipe_include_not_in_itemlist
+                global recipe_include_important
+                global add_item_id
+                global found_recipes
                 
+                if imgui.button("Add all recipes"):
+                    print("Checking recipe list...")
+                    recipeStatuses = loaded_save["saveData"]["m_RecipeStatus"]["recipeInfoMap"]
+                    for recipeStatus in recipeStatuses:
+                        add_recipe_by_recipestatus(recipeStatus)
+                    print("Done")
+                imgui.same_line()
+                changed, recipe_include_story = imgui.checkbox("Include Story recipes?" , recipe_include_story)
+                imgui.same_line()
+                changed, recipe_include_important = imgui.checkbox("Include Key Items?" , recipe_include_important)
+                imgui.same_line()
+                changed, recipe_include_not_in_itemlist = imgui.checkbox("Include recipes not in item list?" , recipe_include_not_in_itemlist)
+                
+                imgui.text("Find recipes for ItemId:")
+                imgui.same_line()
+                imgui.push_item_width(min(max(imgui.get_window_width()-250, 150),max(150, 20+imgui.calc_text_size(add_item_id)[0])))
+                changed, add_item_id = imgui.input_text("##addItemId", add_item_id)
+                imgui.pop_item_width()
+                imgui.same_line()
+                if imgui.button("Find"):
+                    found_recipes.clear()
+                    if add_item_id != "" and len(add_item_id) >= 3:
+                        recipeStatuses = loaded_save["saveData"]["m_RecipeStatus"]["recipeInfoMap"]
+                        for recipeStatus in recipeStatuses:
+                            if ("_story" in recipeStatus["key"] and not recipe_include_story) or ("iky" in recipeStatus["key"] and not recipe_include_important):
+                                continue
+                            if add_item_id in recipeStatus["key"]:
+                                found_recipes.append(recipeStatus)
+                if add_item_id in item_list:
+                    imgui.same_line()
+                    imgui.text(item_list[add_item_id])
+                if len(found_recipes) != 0:
+                    found_recipes_txt = '\n'.join([recipe['key'] for recipe in found_recipes])
+                    imgui.text(f"Found recipes:\n{found_recipes_txt}")
+                    if imgui.button("Add found recipes"):
+                        for recipe in found_recipes:
+                            add_recipe_by_recipestatus(recipe)
+                        add_item_id = ""
+                        found_recipes.clear()
         ## SAVE DATA FULL
         if loaded_save and imgui.begin_tab_item("Save Data (Full)")[0]:
             imgui.begin_child("saveDataChild")
@@ -1007,6 +1142,16 @@ patternfile={pattern_file_location}""")
                 tmp_txt = "Not Loaded"
             imgui.same_line()
             imgui.text_colored(tmp_col, f"{tmp_txt}")
+            imgui.end_tab_item()
+        if imgui.begin_tab_item("Log")[0]:
+            global log_txt
+            if imgui.button("Clear log"):
+                log_txt.clear()
+            imgui.begin_child("##logEntries")
+            imgui.text("\n".join(log_txt))
+            if imgui.get_scroll_y() >= imgui.get_scroll_max_y():
+                imgui.set_scroll_here_y(1)
+            imgui.end_child()
             imgui.end_tab_item()
         imgui.end_tab_bar()
 
