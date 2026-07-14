@@ -923,7 +923,7 @@ Changelog:
                         changed, area["value"]["AreaPoint"] = handle_inputs(f"##AreaPoint{area_idx}", gstruct["AreaPoint"], area["value"]["AreaPoint"])
                     imgui.end_table()
             if imgui.collapsing_header("Treasure Grove"):
-                imgui_wraptext("Branches reset on load if they're invalid, such as having multiple Strangeling floors.\nYou can instead change an already planted dungeon's rooms.\nThis retains the original floor, but when you enter it it will have a modified layout.")
+                imgui_wraptext("Branches reset on load if they're invalid, such as having multiple Strangeling floors.\nYou can instead change an already planted dungeon's rooms.\nThis retains the original floor, but when you enter it it will have a modified layout.\nNOTE: Requires an existing Strangeling floor to copy the rooms from.")
                 if imgui.button("Change all current Grove rooms to Strangeling (except Boss)"):
                     floors = loaded_save["saveData"]["m_PlantDungeonStatus"]["plantDungeonFloorStatusCorePList"]
                     found_Tamagemono = None
