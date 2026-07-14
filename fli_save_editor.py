@@ -6,7 +6,7 @@ import fli_bin2sav
 import fli_sav2json
 import copy
 
-VERSION = "0.1.2"
+VERSION = "0.1.3"
 
 INDENT_LEVEL = 8
 
@@ -683,6 +683,7 @@ The .exe versions were packaged using python 3.10.5, using pyinstaller
 \tpycryptodome
 
 Changelog:
+\t0.1.3 - Add "change all grove rooms into Strangeling" button, fix IntVector crash
 \t0.1.2 - Add recipes, an "add all recipes" button, and log tab
 \t0.1.1 - Clamp int (u8, etc) to min/max, other int input validation
 \t0.1 - Alpha release""")
@@ -921,6 +922,20 @@ Changelog:
                         imgui.table_next_column()
                         changed, area["value"]["AreaPoint"] = handle_inputs(f"##AreaPoint{area_idx}", gstruct["AreaPoint"], area["value"]["AreaPoint"])
                     imgui.end_table()
+            if imgui.collapsing_header("Treasure Grove"):
+                imgui_wraptext("Branches reset on load if they're invalid, such as having multiple Strangeling floors.\nYou can instead change an already planted dungeon's rooms.\nThis retains the original floor, but when you enter it it will have a modified layout.")
+                if imgui.button("Change all current Grove rooms to Strangeling (except Boss)"):
+                    floors = loaded_save["saveData"]["m_PlantDungeonStatus"]["plantDungeonFloorStatusCorePList"]
+                    found_Tamagemono = None
+                    for floor in floors:
+                        if floor["clearCondiitonId"]["Name"] == "Tamagemono":
+                            found_Tamagemono = floor["roomStHdlArray"]
+                            break
+                    if found_Tamagemono is not None:
+                        for floor in floors:
+                            if floor["clearCondiitonId"]["Name"] in ["AllEnemyDefeat", "TargetEnemyDefeat", "AllOreDefeat", "TargetOreItemGet", "AllTreeDefeat", "TargetTreeItemGet", "AllFishDefeat", "TargetFishItemGet", "AllVegetableDefeat", "TargetVegetableItemGet" ]:
+                                floor["clearCondiitonId"]["Name"] = "Tamagemono"
+                                floor["roomStHdlArray"] = found_Tamagemono
             if imgui.collapsing_header("Extra - useful operations"):
                 imgui_wraptext("To manually add a recipe, add the irp_ItemId item to invRecipe and set the bitFlag in m_RecipeStatus for recipe_ItemId to 1")
                 global recipe_include_story

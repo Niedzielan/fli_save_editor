@@ -204,6 +204,9 @@ class SaveData:
             # TODO: split FVector and FRotator to add property names x, y, z vs pitch, yaw, roll
             size = 8*3
             data = list(struct.unpack("<ddd", self.save_binary[binary_offset:binary_offset+size])) # JSON turns tuple into list anyway, this allows consistency loading dict directly
+        elif type_name in ["IntVector"]:
+            size = 4*3
+            data = list(struct.unpack("<iii", self.save_binary[binary_offset:binary_offset+size]))
         elif type_name in ["FVector2D", "Vector2D"]:
             size = 8*2
             data = list(struct.unpack("<dd", self.save_binary[binary_offset:binary_offset+size])) # JSON turns tuple into list anyway, this allows consistency loading dict directly
@@ -294,6 +297,8 @@ class SaveData:
         elif type_name in ["FVector3", "Vector3"] or type_name in ["FVector", "Vector"] or type_name in ["FRotator", "Rotator"]:
             # TODO: split FVector and FRotator to add property names x, y, z vs pitch, yaw, roll
             data = struct.pack("<ddd", *value)
+        elif type_name in ["IntVector"]:
+            data = struct.pack("<iii", *value)
         elif type_name in ["FVector2D", "Vector2D"]:
             data = struct.pack("<dd", *value)
         ## STRINGS
@@ -421,22 +426,22 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+##
 ##    saveDataCl = SaveData()
 ##    print("Test: parse pattern file")
 ##    saveDataCl.parsePatternFile()
 ##    print("Test: load save file")
-##    saveDataCl.loadSaveFile("gamedata.sav")
+##    saveDataCl.loadSaveFile("fli_save_editor/002DAE74-00-gamedata_TEST2026_A.sav")
 ##    print("Test: sav binary to dict")
 ##    saveDataCl.binToDict2()
 ##    print("Test: save dict")
-##    saveDataCl.saveJsonFile("testing.json")
+##    saveDataCl.saveJsonFile("fli_save_editor/testing.json")
 ##    saveDataCl.save_binary = b''
 ##    saveDataCl.save_dict = {}
 ##    print("Test: load dict")
-##    saveDataCl.loadJsonFile("testing.json")
+##    saveDataCl.loadJsonFile("fli_save_editor/testing.json")
 ##    print("Test: dict to binary")
 ##    saveDataCl.dictToBin2()
 ##    print("Test: save binary save")
-##    saveDataCl.saveSaveFile("testing.sav")
+##    saveDataCl.saveSaveFile("fli_save_editor/testing.sav")
     
