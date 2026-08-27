@@ -1228,6 +1228,7 @@ u32 IsFavorite;
 u32 isPresented;
 Name aocId;
 Name expiredItemId;
+Name creatorItemShapeId;
 };
 
 struct AvatarStatusHandle : Handle {
